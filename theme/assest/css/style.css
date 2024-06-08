@@ -1,0 +1,181 @@
+/*-------------------------------------------------
+
+    Template Name: 
+    Theme URL: 
+    Description: 
+    Author: 
+    Author URL: 
+    Version: 1.0.0
+    Tags: 
+
+---------------------------------------------------*/
+
+/******** TABLE OF CONTENTS *********
+   
+	01. Default Styles
+		1.1 Variables 
+		1.2 General & Basic
+		
+	02. Elemnts Styles
+		2.1 Button's 
+	
+	03. Welcome Styles
+		3.1 
+
+*************************************/
+
+/************************************
+	01. Default Styles 
+************************************/
+/*--------------------------
+    1.1 Variables   
+--------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root,
+[data-bs-theme=light] {
+
+	/* Theme Colors */
+	--color-primary: #F41781;
+	--color-secondary: #FF8F28;
+	--color-white: #fff;
+	--color-black: #000;
+	--color-blue:#1e68f7;
+	--color-dark-charcoal: #333333;
+
+	/* Font Family */
+	--font-primary: 'Poppins', sans-serif;
+
+	/* Font Weight */
+	--font-weight-400: 400;
+	--font-weight-500: 500;
+	--font-weight-600: 600;
+	--font-weight-800: 800;
+
+	/* Font Size */
+	--font-size-20: 20px;
+	--font-size-18: 18px;
+	--font-size-16: 16px;
+	--font-size-15: 15px;
+	--font-size-14: 14px;
+	--font-size-13: 13px;
+	--h1: 66px;
+	--h2: 25px;
+	--h3: 21px;
+
+	/* Font Line height */
+	--font-line-height-92: 92px;
+	--font-line-height-37: 37px;
+	--font-line-height-33: 33px;
+	--font-line-height-30: 30px;
+	--font-line-height-25: 25px;
+	--font-line-height-27: 27px;
+	--font-line-height-22: 22px;
+	--font-line-height-19: 19px;
+
+	/* Font Letter Spacing */
+	--font-letter-spacing-2: 2%;
+	--font-letter-spacing-9: 9%;
+
+}
+
+/*--------------------------
+    1.2 General & Basic   
+--------------------------*/
+
+html,
+body {
+	font-family: var(--font-primary);
+	font-weight: var(--font-weight-400);
+	font-size: var(--font-size-16);
+	line-height: var(--font-line-height-25);
+	color: var(--color-dark-charcoal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-primary);
+}
+
+h1 {
+	font-weight: var(--font-weight-800);
+	font-size: var(--h1);
+	line-height: var(--font-line-height-92);
+	letter-spacing: var(--font-letter-spacing-2);
+}
+
+h2 {
+	font-weight: var(--font-weight-600);
+	font-size: var(--h2);
+	line-height: var(--font-line-height-37);
+}
+
+h3 {
+	font-weight: var(--font-weight-600);
+	font-size: var(--h3);
+	line-height: var(--font-line-height-30);
+}
+
+p {
+	font-family: var(--font-primary);
+	font-weight: var(--font-weight-400);
+	font-size: var(--font-size-15);
+	line-height: var(--font-line-height-25);
+	color: var(--color-dark-charcoal);
+}
+
+.text-orange {
+	color: var(--color-secondary);
+}
+.px-100{
+	padding: 100px 0;
+}
+.max-width-content{
+	max-width: fit-content;
+}
+/************************************
+	03. Welcome Styles
+************************************/
+.welcome-section {
+	position: relative;
+	background-image: url("../images/backgrounds/backgroun_heart_pattern.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	align-items: center;
+}
+
+.btn-gl,.btn-gl:hover{
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+.btn-fb,.btn-fb:hover{
+	background-color: var(--color-blue);
+	color: var(--color-white);
+}
+.btn-theme{
+	background: linear-gradient(to left,var(--color-primary),var(--color-secondary));
+	color: var(--color-white);
+}
+.btn-theme:hover{
+	background: linear-gradient(to right,var(--color-primary),var(--color-secondary));
+	color: var(--color-white);
+}
+.social-btn{
+	padding: 16px 35px 16px 35px;
+	max-width: 25rem;
+    width: 100%;
+	border-radius: 10px;
+	display: flex;
+    gap: 15px;
+	align-items: center;
+    text-decoration: none;
+}
+.wel-sub-title{
+	font-size: var(--font-line-height-19);
+}
