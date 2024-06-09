@@ -6,14 +6,14 @@
 
 @media (max-width: 1199px) {
   h1 {
-    font-size: 45px;
+    font-size: 48px;
     line-height: normal;
   }
 }
 
 @media (max-width: 991px) {
   .welcome-section {
-   /*  position: fixed;
+    /*  position: fixed;
     width: 100%;
     height: 100%; */
     overflow: scroll;
@@ -38,17 +38,23 @@
     padding: 40px 0;
   }
 
-  .site-logo a {
+  .site-logo img {
     height: 60px;
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 35px;
+  }
+}
 
 @media (max-width: 414px) {
-  h1 {
-    font-size: 40px;
-  }
+
+}
+
+@media (max-width: 320px) {
+
 }
 
 /*
