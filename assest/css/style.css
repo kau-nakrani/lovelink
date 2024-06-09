@@ -138,6 +138,44 @@ p {
 .max-width-content{
 	max-width: fit-content;
 }
+
+/************************************
+	02. Elemnts Styles
+************************************/
+/*--------------------------
+    2.1 Button's   
+--------------------------*/
+.btn-theme{
+	display: flex;
+    gap: 15px;
+	padding: 16px 35px 16px 35px;
+	border-radius: 10px;
+	background: linear-gradient(269deg,var(--color-primary),var(--color-secondary));
+	color: var(--color-white);
+    transition: all 500ms ease-in-out;
+	align-items: center;
+    text-decoration: none;
+	position: relative;
+}
+.btn-theme:hover{
+	transition: all 0.4s ease-in-out;
+	box-shadow: 0px 0px 20px rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
+	color: var(--color-white);
+}
+/* .btn-gradient:hover:before{
+	opacity: 1;
+} */
+/* .btn-theme:before{
+	content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    background: linear-gradient(89deg, #F41781, #FF8F28);
+} */
 /************************************
 	03. Welcome Styles
 ************************************/
@@ -147,38 +185,26 @@ p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
-	align-items: center;
+	overflow: overlay;
 }
 
 .btn-gl,.btn-gl:hover{
-	background-color: var(--color-white);
+	background: var(--color-white);
 	color: var(--color-black);
+	box-shadow:none;
 }
 .btn-fb,.btn-fb:hover{
-	background-color: var(--color-blue);
+	background: var(--color-blue);
 	color: var(--color-white);
-}
-.btn-theme{
-	background: linear-gradient(to left,var(--color-primary),var(--color-secondary));
-	color: var(--color-white);
-}
-.btn-theme:hover{
-	background: linear-gradient(to right,var(--color-primary),var(--color-secondary));
-	color: var(--color-white);
+	box-shadow:none;
 }
 .social-btn{
-	padding: 16px 35px 16px 35px;
 	max-width: 25rem;
     width: 100%;
-	border-radius: 10px;
-	display: flex;
-    gap: 15px;
-	align-items: center;
-    text-decoration: none;
 }
 .wel-sub-title{
 	font-size: var(--font-line-height-19);
 }
-.welcome-image{
+.align-image-center{
 	align-items: center;
 }
