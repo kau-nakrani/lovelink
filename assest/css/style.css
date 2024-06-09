@@ -132,7 +132,7 @@ p {
 .text-orange {
 	color: var(--color-secondary);
 }
-.px-100{
+.py-100{
 	padding: 100px 0;
 }
 .max-width-content{
@@ -178,4 +178,7 @@ p {
 }
 .wel-sub-title{
 	font-size: var(--font-line-height-19);
+}
+.welcome-image{
+	align-items: center;
 }
