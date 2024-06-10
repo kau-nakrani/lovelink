@@ -41,7 +41,7 @@
 	--color-secondary: #FF8F28;
 	--color-white: #fff;
 	--color-black: #000;
-	--color-blue:#1e68f7;
+	--color-blue: #1e68f7;
 	--color-dark-charcoal: #333333;
 
 	/* Font Family */
@@ -132,10 +132,12 @@ p {
 .text-orange {
 	color: var(--color-secondary);
 }
-.py-100{
+
+.py-100 {
 	padding: 100px 0;
 }
-.max-width-content{
+
+.max-width-content {
 	max-width: fit-content;
 }
 
@@ -145,19 +147,20 @@ p {
 /*--------------------------
     2.1 Button's   
 --------------------------*/
-.btn-theme{
+.btn-theme {
 	display: flex;
-    gap: 15px;
+	gap: 5px;
 	padding: 16px 35px 16px 35px;
 	border-radius: 10px;
-	background: linear-gradient(269deg,var(--color-primary),var(--color-secondary));
+	background: linear-gradient(269deg, var(--color-primary), var(--color-secondary));
 	color: var(--color-white);
-    transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
 	align-items: center;
-    text-decoration: none;
+	text-decoration: none;
 	position: relative;
 }
-.btn-theme:hover{
+
+.btn-theme:hover {
 	transition: all 0.4s ease-in-out;
 	box-shadow: 0px 0px 20px rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
 	color: var(--color-white);
@@ -166,9 +169,10 @@ p {
 /*--------------------------
     2.2 Paragraph   
 --------------------------*/
-.par-text{
+.par-text {
 	font-size: var(--font-line-height-19);
 }
+
 /************************************
 	03. Welcome Styles
 ************************************/
@@ -181,20 +185,33 @@ p {
 	overflow: overlay;
 }
 
-.btn-gl,.btn-gl:hover{
+.btn-gl,
+.btn-gl:hover {
 	background: var(--color-white);
 	color: var(--color-black);
-	box-shadow:none;
+	box-shadow: none;
 }
-.btn-fb,.btn-fb:hover{
+
+.btn-fb,
+.btn-fb:hover {
 	background: var(--color-blue);
 	color: var(--color-white);
-	box-shadow:none;
+	box-shadow: none;
 }
-.social-btn{
+
+.btn-gl:hover {
+	background: #f1f1f1;
+}
+
+.btn-fb:hover {
+	background: #074bcd;
+}
+
+.social-btn {
 	max-width: 25rem;
-    width: 100%;
+	width: 100%;
 }
-.align-image-center{
+
+.align-image-center {
 	align-items: center;
 }
