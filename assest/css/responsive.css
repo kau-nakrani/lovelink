@@ -40,6 +40,7 @@
   }
   .welcome-section{
     height: auto;
+    overflow: unset;
   }
 }
 

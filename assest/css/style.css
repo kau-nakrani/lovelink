@@ -196,5 +196,5 @@ p {
 	font-size: var(--font-line-height-19);
 }
 .align-image-center{
-	align-items: center;
+	/* align-items: center; */
 }
