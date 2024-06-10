@@ -23,6 +23,17 @@
   }
 }
 
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+  .btn-theme{
+    padding:16px
+  }
+  .par-text{
+    font-size: 16px;
+  }
+}
 
 @media (max-width: 479px) {
   .py-100 {
@@ -31,12 +42,6 @@
 
   .site-logo img {
     height: 60px;
-  }
-}
-
-@media (max-width: 576px) {
-  h1 {
-    font-size: 35px;
   }
 }
 
