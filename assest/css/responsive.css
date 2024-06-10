@@ -38,6 +38,9 @@
   h1 {
     font-size: 35px;
   }
+  .welcome-section{
+    height: auto;
+  }
 }
 
 @media (max-width: 414px) {
