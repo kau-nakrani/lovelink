@@ -38,10 +38,6 @@
   h1 {
     font-size: 35px;
   }
-  .welcome-section{
-    height: auto;
-    overflow: unset;
-  }
 }
 
 @media (max-width: 414px) {
