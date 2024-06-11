@@ -12,8 +12,9 @@
 }
 
 @media (max-width: 991px) {
-  .align-center {
-    justify-content: center;
+   h1 {
+    font-size: 36px;
+    line-height: normal;
   }
   .height-m-auto {
     height: auto;
@@ -23,9 +24,11 @@
   }
 }
 
-/* @media (max-width: 767px) {
- 
-} */
+@media (max-width: 767px) {
+   .align-center {
+    justify-content: center;
+  }
+} 
 
 @media (max-width: 576px) {
   h1 {
