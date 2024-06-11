@@ -185,8 +185,6 @@ p {
 	background-size: cover;
 	height: 100vh;
 	overflow: overlay;
-	/* align-items: center;
-    flex-wrap: wrap; */
 }
 
 .btn-gl,
