@@ -154,6 +154,7 @@ p {
 	border-radius: 10px;
 	background: linear-gradient(to left,var(--color-secondary),var(--color-primary),var(--color-primary),var(--color-secondary));
 	color: var(--color-white);
+	background-size: 300% 100%;
 	transition: all 500ms ease-in-out;
 	align-items: center;
 	text-decoration: none;
