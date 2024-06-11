@@ -16,11 +16,12 @@
     font-size: 36px;
     line-height: normal;
   }
-  .height-m-auto {
-    height: auto;
-  }
+
   .py-100 {
     padding: 40px 0;
+  }
+  .site-logo img {
+    height: 60px;
   }
 }
 
@@ -50,9 +51,7 @@
 
 @media (max-width: 479px) {
 
-  .site-logo img {
-    height: 60px;
-  }
+
 }
 
 /* @media (max-width: 414px) {
