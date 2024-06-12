@@ -21,6 +21,7 @@
 		2.2 Paragraph 
 	
 	03. Welcome Styles
+	04. Multiple Steup
 
 *************************************/
 
@@ -183,8 +184,9 @@ p {
 	background-image: url("../images/backgrounds/backgroun_heart_pattern.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 	overflow: overlay;
+	align-items: center;
 }
 
 .btn-gl,
@@ -216,4 +218,14 @@ p {
 
 .align-image-center {
 	align-items: center;
+}
+
+/************************************
+	04. Multiple Steup
+************************************/
+.multiple-steups{
+	background-image: url(../images/backgrounds/backgroun_heart_pattern_second.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
 }
