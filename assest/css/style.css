@@ -15,6 +15,7 @@
 	01. Default Styles
 		1.1 Variables 
 		1.2 General & Basic
+		1.3 Form
 		
 	02. Elemnts Styles
 		2.1 Button's
@@ -22,7 +23,15 @@
 		2.3 Icons's
 	
 	03. Welcome Styles
-	04. Multiple Steup
+	
+	04. Multiple Steup Screen
+		4.1 Phone Number 
+		4.2 OPT
+		4.3 Introduction
+		4.4 Basic Information
+		4.5 Select One option
+		4.6 Select Multiple options
+		4.7 Image Upload's
 
 *************************************/
 
@@ -42,7 +51,9 @@
 	--color-primary: #F41781;
 	--color-secondary: #FF8F28;
 	--color-white: #fff;
-	--colr-white-grey :#F6F6F6;
+	--color-white-grey: #F6F6F6;
+	--color-gray: #808080;
+	--color-gray-30: #4D4D4D;
 	--color-black: #000;
 	--color-blue: #1e68f7;
 	--color-dark-charcoal: #333333;
@@ -134,12 +145,22 @@ p {
 	color: var(--color-dark-charcoal);
 }
 
+.text-primary {
+	color: var(--color-primary) !important;
+}
+
 .text-orange {
-	color: var(--color-secondary);
+	color: var(--color-secondary) !important;
 }
-.text-black{
-	color: var(--color-black);
+
+.text-black {
+	color: var(--color-black) !important;
 }
+
+.color-gray {
+	color: var(--color-gray) !important;
+}
+
 .py-80 {
 	padding: 80px 0;
 }
@@ -154,20 +175,55 @@ p {
 	box-shadow: 0px 0px 20px rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
 	color: var(--color-white);
 }
-.font-weight-6{
+
+.font-weight-6 {
 	font-weight: var(--font-weight-600);
 }
-.filed-effect:hover,.filed-effect:focus,.filed-effect:active,.filed-effect:visited{
-	box-shadow: 0 0 0 .09rem rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
+
+.font-weight-5 {
+	font-weight: var(--font-weight-500);
 }
 .display-center {
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
-a:hover{
-	color:var(--color-secondary);
+
+a:hover {
+	color: var(--color-secondary);
 }
+
+/*--------------------------
+   1.3 Form   
+--------------------------*/
+input[type="text"],
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:visited {
+	background: var(--color-white-grey);
+	border: 1px solid #E8E2E4 !important;
+	border-radius: 11px;
+	padding: 20px 22px !important;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:visited,
+.multisteup-card .iti__flag-container:hover,
+.multisteup-card .iti__flag-container:focus {
+	background: linear-gradient(var(--color-white-grey), var(--color-white-grey)), linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);
+	border: 1px solid transparent !important;
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	outline: none;
+	box-shadow: 0px 6px 12px 0px rgb(0 0 0 / 8%);
+}
+
+
+
+
 /************************************
 	02. Elemnts Styles
 ************************************/
@@ -187,14 +243,18 @@ a:hover{
 	text-decoration: none;
 	position: relative;
 }
-.btn-theme-steup{
+
+.btn-theme-steup {
 	width: 234px;
 }
-.btn-theme-1,.btn-theme-1:hover{
+
+.btn-theme-1,
+.btn-theme-1:hover {
 	background: transparent;
 	color: var(--color-secondary);
 	border: 1px solid var(--color-secondary);
 }
+
 /*--------------------------
     2.2 Paragraph   
 --------------------------*/
@@ -207,9 +267,10 @@ a:hover{
 --------------------------*/
 .themeicon {
 	background: var(--linear-gradient-left-second);
-	max-width: 80px;
-	padding: 25px;
 	box-shadow: 0px 10px 19px 0px #2C030B26;
+	width: fit-content;
+	min-width: 82px;
+	min-height: 82px
 }
 
 /************************************
@@ -259,6 +320,10 @@ a:hover{
 /************************************
 	04. Multiple Steup
 ************************************/
+/*--------------------------
+    4.1 Phone Number    
+--------------------------*/
+
 .multisteups {
 	background-image: url("../images/backgrounds/backgroun_heart_pattern_second.png");
 	background-repeat: no-repeat;
@@ -283,37 +348,56 @@ a:hover{
 	overflow: hidden;
 	margin: auto;
 }
-.multisteup-card:hover{
-    box-shadow: 0px 13px 13px 0px #BE373712;
-    transition: 0.5s;
+
+.multisteup-card:hover {
+	box-shadow: 0px 13px 13px 0px #BE373712;
+	transition: 0.5s;
 }
+
 .iti {
 	width: 100%;
 	display: flex;
 }
-.multisteup-card .iti__selected-dial-code {
-    display: none;
-}
+
 .multisteup-card #mobile_code {
 	margin-left: 3%;
-	padding: 0;
-	border-radius: 11px;
-	padding: 20px 22px !important;
-	background: var(--colr-white-grey);
 	border: none;
 }
 
 .multisteup-card .iti__flag-container {
 	border-radius: 11px;
 	padding: 20px 10px;
-	background: var(--colr-white-grey);
+	background: var(--color-white-grey);
 	position: relative;
 	max-width: 100%;
+	border: 1px solid #E8E2E4 !important;
 }
-.multisteup-card .iti__flag-container:hover,.multisteup-card .iti__flag-container:focus{
-	box-shadow: 0 0 0 .09rem rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
-}
+
 .multisteup-card .iti--separate-dial-code .iti__selected-flag,
 .multisteup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
 	background-color: unset;
 }
+
+/*--------------------------
+    4.2 OPT
+--------------------------*/
+.otpnumber {
+	max-height: 62px;
+	max-width: 62px;
+}
+
+/*--------------------------
+    4.3 Introduction  
+--------------------------*/
+/*--------------------------
+    4.4 Basic Information    
+--------------------------*/
+/*--------------------------
+    4.5 Select One option   
+--------------------------*/
+/*--------------------------------
+    4.6 Select Multiple options    
+--------------------------------*/
+/*--------------------------
+    4.7 Image Upload's   
+--------------------------*/
