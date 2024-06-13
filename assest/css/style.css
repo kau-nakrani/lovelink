@@ -199,8 +199,7 @@ a:hover {
 input[type="text"],
 input[type="text"]:hover,
 input[type="text"]:focus,
-input[type="text"]:active,
-input[type="text"]:visited {
+input[type="text"]:active {
 	background: var(--color-white-grey);
 	border: 1px solid #E8E2E4 !important;
 	border-radius: 11px;
@@ -210,7 +209,6 @@ input[type="text"]:visited {
 input[type="text"]:hover,
 input[type="text"]:focus,
 input[type="text"]:active,
-input[type="text"]:visited,
 .multisteup-card .iti__flag-container:hover,
 .multisteup-card .iti__flag-container:focus {
 	background: linear-gradient(var(--color-white-grey), var(--color-white-grey)), linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);

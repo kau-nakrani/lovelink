@@ -39,4 +39,10 @@
       }
     }
   });
+
+  $(".otpnumber").keyup(function () {
+    if (this.value.length == this.maxLength) {
+      $(this).next('.otpnumber').focus();
+    }
+});
 })(jQuery);
