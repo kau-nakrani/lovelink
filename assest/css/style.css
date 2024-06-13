@@ -229,3 +229,19 @@ p {
     background-position: center;
     background-size: cover
 }
+.multi-form-container{
+	min-height: 100vh;
+    padding: 51px 15px;
+    overflow: overlay;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;	
+}
+.multi-steup-card{
+	padding: 86px 86px 170px;
+    max-width: 663px;
+    min-height: 594px;
+    border-radius: 39px;
+    overflow: hidden;
+	margin: auto;
+}
