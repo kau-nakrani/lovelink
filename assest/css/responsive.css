@@ -35,15 +35,24 @@
     padding: 86px;
     min-height: auto;
   }
+
+  .iti-mobile .iti--container {
+    left: 0px;
+    right: 0;
+    margin: 20px;
+    width: auto;
+  }
 }
 
 @media (max-width: 576px) {
   h1 {
     font-size: 24px;
   }
+
   h2 {
     font-size: 20px;
   }
+
   .btn-theme {
     padding: 16px
   }
@@ -59,11 +68,9 @@
   .multisteup-card {
     padding: 35px;
   }
-  .iti-mobile .iti--container{
-    left: 0px;
-    right: 0;
-    margin: 20px;
-    width: auto;
+
+  .multisteups .container {
+    padding: 30px 15px;
   }
 }
 
