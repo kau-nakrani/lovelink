@@ -19,6 +19,7 @@
 	02. Elemnts Styles
 		2.1 Button's
 		2.2 Paragraph 
+		2.3 Icons's
 	
 	03. Welcome Styles
 	04. Multiple Steup
@@ -41,9 +42,12 @@
 	--color-primary: #F41781;
 	--color-secondary: #FF8F28;
 	--color-white: #fff;
+	--colr-white-grey :#F6F6F6;
 	--color-black: #000;
 	--color-blue: #1e68f7;
 	--color-dark-charcoal: #333333;
+	--linear-gradient-left: linear-gradient(to left, var(--color-secondary), var(--color-primary), var(--color-primary), var(--color-secondary));
+	--linear-gradient-left-second: linear-gradient(to left, var(--color-primary), var(--color-secondary));
 
 	/* Font Family */
 	--font-primary: 'Poppins', sans-serif;
@@ -133,7 +137,9 @@ p {
 .text-orange {
 	color: var(--color-secondary);
 }
-
+.text-black{
+	color: var(--color-black);
+}
 .py-80 {
 	padding: 80px 0;
 }
@@ -142,6 +148,26 @@ p {
 	max-width: fit-content;
 }
 
+.btn-theme:hover {
+	background-position: right center;
+	transition: all 0.4s ease-in-out;
+	box-shadow: 0px 0px 20px rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
+	color: var(--color-white);
+}
+.font-weight-6{
+	font-weight: var(--font-weight-600);
+}
+.filed-effect:hover,.filed-effect:focus,.filed-effect:active,.filed-effect:visited{
+	box-shadow: 0 0 0 .09rem rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
+}
+.display-center {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+	color:var(--color-secondary);
+}
 /************************************
 	02. Elemnts Styles
 ************************************/
@@ -153,7 +179,7 @@ p {
 	gap: 5px;
 	padding: 16px 35px 16px 35px;
 	border-radius: 10px;
-	background: linear-gradient(to left,var(--color-secondary),var(--color-primary),var(--color-primary),var(--color-secondary));
+	background: var(--linear-gradient-left);
 	color: var(--color-white);
 	background-size: 300% 100%;
 	transition: all 500ms ease-in-out;
@@ -161,14 +187,14 @@ p {
 	text-decoration: none;
 	position: relative;
 }
-
-.btn-theme:hover {
-	background-position: right center;
-	transition: all 0.4s ease-in-out;
-	box-shadow: 0px 0px 20px rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
-	color: var(--color-white);
+.btn-theme-steup{
+	width: 234px;
 }
-
+.btn-theme-1,.btn-theme-1:hover{
+	background: transparent;
+	color: var(--color-secondary);
+	border: 1px solid var(--color-secondary);
+}
 /*--------------------------
     2.2 Paragraph   
 --------------------------*/
@@ -176,10 +202,20 @@ p {
 	font-size: var(--font-line-height-19);
 }
 
+/*--------------------------
+    2.3 Icons's   
+--------------------------*/
+.themeicon {
+	background: var(--linear-gradient-left-second);
+	max-width: 80px;
+	padding: 25px;
+	box-shadow: 0px 10px 19px 0px #2C030B26;
+}
+
 /************************************
 	03. Welcome Styles
 ************************************/
-.welcome-wrapper{
+.welcome-wrapper {
 	position: relative;
 	background-image: url("../images/backgrounds/backgroun_heart_pattern.png");
 	background-repeat: no-repeat;
@@ -223,25 +259,61 @@ p {
 /************************************
 	04. Multiple Steup
 ************************************/
-.multiple-steups{
-	background-image: url(../images/backgrounds/backgroun_heart_pattern_second.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover
+.multisteups {
+	background-image: url("../images/backgrounds/backgroun_heart_pattern_second.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover
 }
-.multi-form-container{
+
+.multisteups .container {
 	min-height: 100vh;
-    padding: 51px 15px;
-    overflow: overlay;
+	padding: 51px 15px;
+	overflow: overlay;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;	
+	flex-direction: column;
+	justify-content: center;
 }
-.multi-steup-card{
+
+.multisteup-card {
 	padding: 86px 86px 170px;
-    max-width: 663px;
-    min-height: 594px;
-    border-radius: 39px;
-    overflow: hidden;
+	max-width: 663px;
+	min-height: 594px;
+	border-radius: 39px;
+	overflow: hidden;
 	margin: auto;
+}
+.multisteup-card:hover{
+    box-shadow: 0px 13px 13px 0px #BE373712;
+    transition: 0.5s;
+}
+.iti {
+	width: 100%;
+	display: flex;
+}
+.multisteup-card .iti__selected-dial-code {
+    display: none;
+}
+.multisteup-card #mobile_code {
+	margin-left: 3%;
+	padding: 0;
+	border-radius: 11px;
+	padding: 20px 22px !important;
+	background: var(--colr-white-grey);
+	border: none;
+}
+
+.multisteup-card .iti__flag-container {
+	border-radius: 11px;
+	padding: 20px 10px;
+	background: var(--colr-white-grey);
+	position: relative;
+	max-width: 100%;
+}
+.multisteup-card .iti__flag-container:hover,.multisteup-card .iti__flag-container:focus{
+	box-shadow: 0 0 0 .09rem rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
+}
+.multisteup-card .iti--separate-dial-code .iti__selected-flag,
+.multisteup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+	background-color: unset;
 }

@@ -28,12 +28,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assest/images/favicons/apple-touch-icon-114x114.png">
 
     <!-- Bootstrap -->
-    <link href="./assest/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assest/css/bootstrap.min.css">
 
-    <!-- Template Css -->
+    <!-- TelePhone -->
+    <link rel="stylesheet" href="./assest/css/intlTelInput.min.css">
+
+    <!-- Template CSS -->
     <link rel="stylesheet" href="./assest/css/style.css">
 
-    <!-- Responsive Css -->
+    <!-- Responsive CSS -->
     <link rel="stylesheet" href="./assest/css/responsive.css">
 
 </head>
@@ -43,32 +46,75 @@
     <!-- Preloader Area End -->
 
     <!-- Multiple steup form Start -->
-    <div class="multiple-steups">
-        <div class="container multi-form-container">
+    <div class="multisteups">
+        <div class="container">
             <form id="multiplesteup" class="multiple-steup" method="post">
                 <!-- step-1 -->
-                <section class="multi-steup-card step-1 bg-white">
+                <section class="multisteup-card step-1 bg-white">
                     <div class="row">
                         <div class="col-12">
-                            <div class="background-theme rounded-circle d-block call-btn mx-auto">
-                                <!-- call icon box start -->
-                                <div class="background-theme rounded-circle d-block call-icon-box mx-auto">
-                                    <svg width="31" height="31" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M31.4357 24.2076L27.0449 20.5579C24.2429 17.7559 19.2482 24.0801 19.2342 24.0941C18.8447 24.4822 15.7149 21.9828 13.1552 19.4245C10.5955 16.8662 8.09749 13.7349 8.48557 13.3454C8.50098 13.3314 14.8252 8.33819 12.0218 5.53474L8.37909 1.14393C4.44642 -2.28297 -7.82795 7.02823 8.61306 23.4748L8.86245 23.7228L9.11183 23.9736C25.5458 40.4146 34.8626 28.1431 31.4357 24.2076Z"
-                                            fill="white" />
-                                    </svg>
+                            <!-- Step-1 call icon -->
+                            <div class="themeicon rounded-circle mx-auto">
+                                <svg width="31" height="31" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.4357 24.2076L27.0449 20.5579C24.2429 17.7559 19.2482 24.0801 19.2342 24.0941C18.8447 24.4822 15.7149 21.9828 13.1552 19.4245C10.5955 16.8662 8.09749 13.7349 8.48557 13.3454C8.50098 13.3314 14.8252 8.33819 12.0218 5.53474L8.37909 1.14393C4.44642 -2.28297 -7.82795 7.02823 8.61306 23.4748L8.86245 23.7228L9.11183 23.9736C25.5458 40.4146 34.8626 28.1431 31.4357 24.2076Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <!-- Step-1 Title -->
+                            <h2 class="pt-4 text-center text-black">Can we get your number?</h2>
+                            <!-- Phone number -->
+                            <div class="form-group py-5">
+                                <label for="phoneInput" class="pb-3">Phone Number</label>
+                                <div class="form-group border-radius-8 mb-sm-0 mb-2 w-100">
+                                    <input type="text" id="mobile_code" class="form-control filed-effect"
+                                        placeholder="Phone Number" name="name">
                                 </div>
                             </div>
+                            <!-- Step-1 description -->
+                            <p class="text-center text-black font-weight-6">We’ll text you a code to verify you’re
+                                really you. Message and data rates may apply. <a
+                                    href="javascript:void(0)" class="text-decoration-underline text-orange"> What
+                                    happens if your number changes?</a>
+                            </p>
                         </div>
                     </div>
                 </section>
+                <!-- Next Prev Button Start -->
+                <div class="display-center gap-3 px-2 mt-5">
+                    <!-- Prev Button -->
+                    <button class="btn-theme-steup btn-theme gap-1 row-flex justify-content-center btn-theme-1" id="prevbtn">
+                        <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.6366 5.73075H2.93879L7.06152 1.60802C7.13591 1.53617 7.19525 1.45022 7.23607 1.35519C7.27689 1.26016 7.29838 1.15795 7.29928 1.05453C7.30018 0.951108 7.28047 0.848543 7.24131 0.752818C7.20214 0.657094 7.14431 0.570128 7.07117 0.496995C6.99804 0.423862 6.91107 0.366026 6.81535 0.326862C6.71963 0.287698 6.61706 0.267991 6.51364 0.268889C6.41022 0.269788 6.30801 0.291275 6.21298 0.332096C6.11795 0.372918 6.032 0.432257 5.96015 0.50665L0.507837 5.95896C0.361816 6.10503 0.279785 6.30311 0.279785 6.50965C0.279785 6.71618 0.361816 6.91427 0.507837 7.06033L5.96015 12.5126C6.10705 12.6545 6.30381 12.733 6.50803 12.7313C6.71226 12.7295 6.90762 12.6476 7.05203 12.5032C7.19645 12.3587 7.27836 12.1634 7.28014 11.9592C7.28191 11.7549 7.2034 11.5582 7.06152 11.4113L2.93879 7.28855H16.6366C16.8431 7.28855 17.0413 7.20649 17.1873 7.06041C17.3334 6.91434 17.4155 6.71623 17.4155 6.50965C17.4155 6.30307 17.3334 6.10495 17.1873 5.95888C17.0413 5.81281 16.8431 5.73075 16.6366 5.73075Z"
+                                fill="#FF8F28" />
+                        </svg>
+                        <span class="text-yellow">Preview</span>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button class="btn-theme-steup btn-theme border-0 gap-1 row-flex justify-content-center"
+                        id="nextbtn">
+                        <span>Next</span>
+                        <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.75455 5.73075H15.4523L11.3296 1.60802C11.2552 1.53617 11.1959 1.45022 11.155 1.35519C11.1142 1.26016 11.0927 1.15795 11.0918 1.05453C11.0909 0.951108 11.1106 0.848543 11.1498 0.752818C11.189 0.657094 11.2468 0.570128 11.3199 0.496995C11.3931 0.423862 11.48 0.366026 11.5758 0.326862C11.6715 0.287698 11.7741 0.267991 11.8775 0.268889C11.9809 0.269788 12.0831 0.291275 12.1781 0.332096C12.2732 0.372918 12.3591 0.432257 12.431 0.50665L17.8833 5.95896C18.0293 6.10503 18.1113 6.30311 18.1113 6.50965C18.1113 6.71618 18.0293 6.91427 17.8833 7.06033L12.431 12.5126C12.2841 12.6545 12.0873 12.733 11.8831 12.7313C11.6789 12.7295 11.4835 12.6476 11.3391 12.5032C11.1947 12.3587 11.1128 12.1634 11.111 11.9592C11.1092 11.7549 11.1877 11.5582 11.3296 11.4113L15.4523 7.28855H1.75455C1.54797 7.28855 1.34986 7.20649 1.20378 7.06041C1.05771 6.91434 0.975649 6.71623 0.975649 6.50965C0.975649 6.30307 1.05771 6.10495 1.20378 5.95888C1.34986 5.81281 1.54797 5.73075 1.75455 5.73075Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Next Prev Button End -->
             </form>
         </div>
     </div>
     </div>
     <!-- Multiple steup form End -->
+
+    <!-- Js Scripts -->
+    <script src="./assest/js/jquery-3.7.0.min.js"></script>
+    <script src="./assest/js/intlTelInput-jquery.min.js"></script>
+    <script src="./assest/js/main.js"></script>
 </body>
 
 </html>
