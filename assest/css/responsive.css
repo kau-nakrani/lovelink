@@ -33,7 +33,7 @@
 
   .multisteup-card {
     padding: 86px;
-    ;
+    min-height: auto;
   }
 }
 
@@ -41,7 +41,9 @@
   h1 {
     font-size: 24px;
   }
-
+  h2 {
+    font-size: 20px;
+  }
   .btn-theme {
     padding: 16px
   }
@@ -55,7 +57,7 @@
   }
 
   .multisteup-card {
-    padding: 86px 35px;
+    padding: 35px;
   }
   .iti-mobile .iti--container{
     left: 0px;
