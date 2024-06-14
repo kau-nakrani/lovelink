@@ -172,7 +172,7 @@ p {
 .btn-theme:hover {
 	background-position: right center;
 	transition: all 0.4s ease-in-out;
-	box-shadow: 0px 0px 20px rgb(244 23 129 / 30%), 0px 0px 20px rgb(255 143 40 / 30%);
+	box-shadow: 0px 2px 10px rgb(244 23 129 / 14%), 0px 0px 20px rgb(255 143 40 / 14%);
 	color: var(--color-white);
 }
 
@@ -340,7 +340,7 @@ input[type="text"]:active,
 }
 
 .multisteup-card {
-	padding: 86px 86px 170px;
+	padding: 75px 75px 170px;
 	max-width: 663px;
 	min-height: 594px;
 	border-radius: 39px;
@@ -354,7 +354,7 @@ input[type="text"]:active,
 }
 
 .multisteup-card-one{
-	padding: 86px 86px;
+	padding: 75px;
 }
 .iti {
 	width: 100%;
@@ -398,6 +398,9 @@ input[type="text"]:active,
 .info-list-data svg{
 	min-width: 13px;
     min-height: 14px;
+}
+.info-list-data p{
+	margin-bottom: 0px;
 }
 /*--------------------------
     4.4 Basic Information    
