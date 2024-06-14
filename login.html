@@ -49,12 +49,12 @@
     <div class="multisteups">
         <div class="container">
             <form id="multiplesteup" class="multiple-steup" method="post" onsubmit="return false;">
-                <!-- step-1 -->
-                <section class="multisteup-card step-1 bg-white active mb-5 text-center" data-pre-section="login"
-                    data-next-section="step-2">
+                <!-- Step 1 -->
+                <section class="multisteup-card step-1 bg-white active mb-5 text-center" data-pre-steup="index.html"
+                data-next-steup="step-2">
                     <div class="row">
                         <div class="col-12">
-                            <!-- Step-1 call icon -->
+                            <!-- Step 1 icon -->
                             <div class="themeicon rounded-circle mx-auto display-center">
                                 <svg width="31" height="31" viewBox="0 0 33 33" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +63,7 @@
                                         fill="white" />
                                 </svg>
                             </div>
-                            <!-- Step-1 Title -->
+                            <!-- Step 1 Title -->
                             <h2 class="pt-4 text-black">Can we get your number?</h2>
                             <!-- Phone number -->
                             <div class="form-group py-sm-5 py-4 text-start">
@@ -73,7 +73,7 @@
                                         name="name">
                                 </div>
                             </div>
-                            <!-- Step-1 description -->
+                            <!-- Step 1 description -->
                             <p class="text-black font-weight-6">We’ll text you a code to verify you’re
                                 really you. Message and data rates may apply. <a href="javascript:void(0)"
                                     class="text-decoration-underline text-orange"> What
@@ -83,12 +83,12 @@
                     </div>
                 </section>
 
-                <!-- step-2 -->
-                <section class="multisteup-card step-2 bg-white mb-5 text-center d-none" data-pre-section="step-1"
-                    data-next-section="step-3">
+                <!-- Step 2 -->
+                <section class="multisteup-card step-2 bg-white mb-5 text-center d-none" data-pre-steup="step-1"
+                    data-next-steup="step-3">
                     <div class="row">
                         <div class="col-12">
-                            <!-- Step-2 otp icon -->
+                            <!-- Step 2 icon -->
                             <div class="themeicon rounded-circle mx-auto display-center">
                                 <svg width="30" height="46" viewBox="0 0 30 46" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -97,23 +97,145 @@
                                         fill="white" />
                                 </svg>
                             </div>
-                            <!-- Step-2 Title -->
+                            <!-- Step 2 Title -->
                             <h2 class="pt-4 text-center text-black">Enter your code</h2>
                             <!-- OTP Number -->
                             <div class="form-group py-sm-5 py-4">
                                 <div class="form-group border-radius-8 mb-sm-0 mb-2 w-100 display-center gap-3">
-                                    <input type="text" id="otp1" class="form-control otpnumber fw-bolder" name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input type="text" id="otp2" class="form-control otpnumber fw-bolder" name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input type="text" id="otp3" class="form-control otpnumber fw-bolder" name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input type="text" id="otp4" class="form-control otpnumber fw-bolder" name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp1" class="form-control otpnumber fw-bolder" tabindex="1"
+                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp2" class="form-control otpnumber fw-bolder" tabindex="2"
+                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp3" class="form-control otpnumber fw-bolder" tabindex="3"
+                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp4" class="form-control otpnumber fw-bolder" tabindex="4"
+                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                                 </div>
                             </div>
-                            <!-- Step-2 description -->
+                            <!-- Step 2 description -->
                             <p class="fs-16 font-weight-5">Don’t receive the code ?</p>
-                            <a href="javascript:void(0)" class="text-primary text-decoration-none font-weight-6">Resend code</a>
+                            <a href="javascript:void(0)" class="text-primary text-decoration-none font-weight-6">Resend
+                                code</a>
                         </div>
                     </div>
                 </section>
+
+                <!-- Step 3 -->
+                <section class="multisteup-card-one multisteup-card step-3 bg-white mb-5 text-center d-none" data-pre-steup="step-2"
+                    data-next-steup="step-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Step 3 icon -->
+                            <div class="svg-filter rounded-circle mx-auto display-center">
+                                <svg width="90" height="72" viewBox="0 0 90 72" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M67.7915 13.6833C65.3091 5.17214 57.791 0.562012 50.2374 0.562012C44.3506 0.562012 38.4284 3.3635 34.8111 9.25045C31.1939 3.3635 25.2716 0.562012 19.3847 0.562012C11.8313 0.562012 4.31296 5.17214 1.83074 13.6833C0.234873 19.251 0.624901 25.2442 3.14285 30.4572C8.63954 41.8408 21.1225 53.189 33.1798 58.6857C34.2083 59.182 35.414 59.182 36.4425 58.6857C37.7546 58.0826 39.0667 57.4088 40.3788 56.6643C39.1022 54.8911 38.0027 53.047 37.1161 51.2383C34.8821 46.5572 34.4564 41.2025 35.946 36.1311C38.1092 28.7195 44.7407 23.7191 52.5071 23.7191C56.8689 23.7191 60.9472 25.3505 64.068 28.223C65.3091 27.0881 66.7277 26.1308 68.2171 25.4215C69.0326 21.556 68.8909 17.5131 67.7915 13.6833ZM87.8282 49.6813C83.6966 58.2243 74.3331 66.7364 65.2879 70.8702C64.521 71.2207 63.6329 71.2207 62.8661 70.8702C53.8209 66.7364 44.4574 58.2243 40.3257 49.6813C38.4373 45.7697 38.1339 41.2847 39.3478 37.1144C41.2025 30.7186 46.8341 27.2677 52.4992 27.2677C56.9168 27.2677 61.368 29.3585 64.077 33.7872C66.786 29.3585 71.2372 27.2677 75.6547 27.2677C81.32 27.2677 86.9515 30.7186 88.8061 37.1144C90.0201 41.2847 89.7166 45.7697 87.8282 49.6813Z"
+                                        fill="url(#paint0_linear_100_2)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M37.8759 31.7174C35.5633 30.0268 33.5086 28.4619 31.8639 27.2094C29.6125 25.4947 28.1297 24.3654 27.8061 24.3C27.6409 24.3973 27.6852 24.7007 27.7416 25.0864C27.854 25.8561 28.0144 26.954 26.6528 27.397C25.8169 27.6689 24.8275 27.3758 24.2736 25.716C23.5544 23.5606 22.8028 22.0287 22.2831 20.9697C22.0108 20.4148 21.8022 19.9897 21.6953 19.6726C21.2135 18.2431 21.9727 16.6163 24.7008 16.9027C24.8658 16.92 25.0309 16.9373 25.196 16.9546C26.9619 17.1395 28.7282 17.3245 30.4878 17.5597C31.9425 17.7542 32.5805 19.264 31.6833 20.335C31.2183 20.89 30.2643 21.1111 30.1369 21.1406C30.1293 21.1424 30.1246 21.1434 30.1232 21.1439C30.7105 21.9359 34.9353 25.2723 40.0217 28.9248L37.8759 31.7174Z"
+                                        fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M54.6298 37.9171C55.4798 38.5157 56.5107 39.2465 57.7757 40.1505C58.8555 40.9221 60.142 40.1616 61.3845 39.4271C62.7691 38.6087 64.0989 37.8226 65.0271 39.2245C65.4526 39.8672 65.354 40.7218 64.7492 41.2904C64.4928 41.5315 64.1049 41.7513 63.4148 42.1421C63.0898 42.3262 62.6978 42.5483 62.2209 42.8284C63.415 44.8991 64.9263 44.1495 66.7817 43.2292C67.4467 42.8993 68.1558 42.5476 68.9105 42.2959C70.689 41.7025 71.9195 44.0947 70.3641 45.1843C70.0267 45.4206 69.6594 45.6141 69.2569 45.8261C69.0664 45.9264 68.868 46.0308 68.6613 46.1459C70.2021 46.5729 71.6267 46.0053 72.8501 45.5179C74.2606 44.9559 75.4037 44.5005 76.1492 45.7987C77.4843 48.1232 73.0116 49.1382 70.2121 49.7735C70.0458 49.8112 69.8853 49.8476 69.7324 49.8829C69.7149 51.0917 70.0745 51.5766 70.3684 51.9729C70.4754 52.1172 70.5737 52.2497 70.6419 52.4012C71.5658 54.453 68.405 55.7097 67.2772 53.5809C66.7141 52.518 66.54 51.6055 66.4005 50.8742C66.1946 49.7943 66.0639 49.1096 64.8675 48.9193C64.7691 49.3757 64.7297 49.489 64.7135 49.6056C64.6888 49.7841 64.7186 49.9702 64.6742 51.4083C64.6203 53.1487 63.804 53.7285 62.9187 53.6749C61.2821 53.5758 61.3057 52.3412 61.3443 50.3166C61.3645 49.2617 61.3887 47.9924 61.1843 46.5574C60.1035 45.8081 59.9647 45.6889 59.8048 45.6424C59.7265 45.6197 59.6432 45.6143 59.4418 45.561C59.3106 46.3674 59.3155 46.7919 59.3201 47.1986C59.3239 47.5312 59.3276 47.8518 59.2566 48.3596C59.0163 50.0792 56.4499 50.2136 56.0572 48.3835C55.9725 47.9887 55.9738 47.8458 55.9985 45.0975C56.0033 44.5562 56.0091 43.9138 56.0153 43.1485C55.7067 42.85 54.1668 41.7222 52.4786 40.5292L54.6298 37.9171Z"
+                                        fill="white" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_100_2" x1="0.87793" y1="35.8475" x2="89.5303"
+                                            y2="35.8475" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF8F28" />
+                                            <stop offset="0.98" stop-color="#F41781" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+                            </div>
+                            <!-- Step 3 Title -->
+                            <h2 class="pt-4 text-center text-black">Welcome to Lovelink.</h2>
+                            <!-- Step 3 description -->
+                            <hr>
+                            <div class="d-flex gap-3 align-items-baseline info-list-data">
+                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.6404 5.31787C12.8646 6.1052 12.8646 7.8948 11.6404 8.68213L4.05708 13.5593C2.72608 14.4154 0.975219 13.4597 0.975219 11.8772L0.97522 2.1228C0.97522 0.540281 2.72608 -0.415367 4.05708 0.440667L11.6404 5.31787Z"
+                                        fill="url(#paint0_linear_1_866)"></path>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_866" x1="5.4021" y1="-2.86279" x2="5.4021"
+                                            y2="16.8628" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF8F28"></stop>
+                                            <stop offset="0.98" stop-color="#F41781"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="text-start">
+                                    <h5 class="text-black">Be oneself.</h5>
+                                    <p>Make sure your photos, your age and your bio is correct.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex gap-3 align-items-baseline info-list-data">
+                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.6404 5.31787C12.8646 6.1052 12.8646 7.8948 11.6404 8.68213L4.05708 13.5593C2.72608 14.4154 0.975219 13.4597 0.975219 11.8772L0.97522 2.1228C0.97522 0.540281 2.72608 -0.415367 4.05708 0.440667L11.6404 5.31787Z"
+                                        fill="url(#paint0_linear_1_866)"></path>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_866" x1="5.4021" y1="-2.86279" x2="5.4021"
+                                            y2="16.8628" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF8F28"></stop>
+                                            <stop offset="0.98" stop-color="#F41781"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="text-start">
+                                    <h5 class="text-black">Stay secure.</h5>
+                                    <p>Don't rush to give your personal information.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex gap-3 align-items-baseline info-list-data">
+                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.6404 5.31787C12.8646 6.1052 12.8646 7.8948 11.6404 8.68213L4.05708 13.5593C2.72608 14.4154 0.975219 13.4597 0.975219 11.8772L0.97522 2.1228C0.97522 0.540281 2.72608 -0.415367 4.05708 0.440667L11.6404 5.31787Z"
+                                        fill="url(#paint0_linear_1_866)"></path>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_866" x1="5.4021" y1="-2.86279" x2="5.4021"
+                                            y2="16.8628" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF8F28"></stop>
+                                            <stop offset="0.98" stop-color="#F41781"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="text-start">
+                                    <h5 class="text-black">Be relax and cool</h5>
+                                    <p>Respect people and treat them well according to their nature.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex gap-3 align-items-baseline info-list-data">
+                                <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.6404 5.31787C12.8646 6.1052 12.8646 7.8948 11.6404 8.68213L4.05708 13.5593C2.72608 14.4154 0.975219 13.4597 0.975219 11.8772L0.97522 2.1228C0.97522 0.540281 2.72608 -0.415367 4.05708 0.440667L11.6404 5.31787Z"
+                                        fill="url(#paint0_linear_1_866)"></path>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_866" x1="5.4021" y1="-2.86279" x2="5.4021"
+                                            y2="16.8628" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF8F28"></stop>
+                                            <stop offset="0.98" stop-color="#F41781"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="text-start">
+                                    <h5 class="text-black">Be capable.</h5>
+                                    <p>ou should avoid being too hasty in giving out your information, as it may cause problems in maintaining your security.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Next Prev Button Start -->
                 <div class="display-center gap-3 px-2">
                     <!-- Prev Button -->

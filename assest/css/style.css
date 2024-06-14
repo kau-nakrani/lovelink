@@ -199,7 +199,8 @@ a:hover {
 input[type="text"],
 input[type="text"]:hover,
 input[type="text"]:focus,
-input[type="text"]:active {
+input[type="text"]:active,
+input[type="text"]:focus-visible{
 	background: var(--color-white-grey);
 	border: 1px solid #E8E2E4 !important;
 	border-radius: 11px;
@@ -352,6 +353,9 @@ input[type="text"]:active,
 	transition: 0.5s;
 }
 
+.multisteup-card-one{
+	padding: 86px 86px;
+}
 .iti {
 	width: 100%;
 	display: flex;
@@ -387,6 +391,14 @@ input[type="text"]:active,
 /*--------------------------
     4.3 Introduction  
 --------------------------*/
+.svg-filter{
+	webkit-filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
+    filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
+}
+.info-list-data svg{
+	min-width: 13px;
+    min-height: 14px;
+}
 /*--------------------------
     4.4 Basic Information    
 --------------------------*/
