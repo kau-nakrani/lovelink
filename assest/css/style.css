@@ -393,6 +393,9 @@ select:hover,
 .multi-steup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
 	background-color: unset;
 }
+.iti__selected-dial-code{
+	display: none;
+}
 
 /*--------------------------
     4.2 OPT
