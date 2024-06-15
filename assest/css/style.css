@@ -52,6 +52,7 @@
 	--color-secondary: #FF8F28;
 	--color-white: #fff;
 	--color-white-grey: #F6F6F6;
+	--color-white-grey-90:#E5E5E5;
 	--color-gray: #808080;
 	--color-gray-30: #4D4D4D;
 	--color-black: #000;
@@ -215,7 +216,7 @@ input[type="text"]:focus,
 select:hover,
 .multi-steup-card .iti__flag-container:hover,
 .multi-steup-card .iti__flag-container:focus,
-.form-basic label:has(input[type="radio"]:hover) {
+.theme-radio label:has(input[type="radio"]:hover) {
 	background: linear-gradient(var(--color-white-grey), var(--color-white-grey)), linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);
 	border: 1px solid transparent !important;
 	background-origin: border-box;
@@ -224,9 +225,15 @@ select:hover,
 	box-shadow: 0px 6px 12px 0px rgb(0 0 0 / 8%);
 }
 
+/*--------------------------
+    grid's   
+--------------------------*/
 
 .grid-cols-3 {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 /************************************
@@ -415,7 +422,7 @@ select:hover,
 /*--------------------------
     4.4 Basic Information    
 --------------------------*/
-.form-basic label:has(input[type="radio"]) {
+.theme-radio label:has(input[type="radio"]) {
 	z-index: 10;
 	position: relative;
 	color: var(--color-black);
@@ -428,27 +435,35 @@ select:hover,
 	min-height: 53px;
 }
 
-.form-basic input[type="radio"] {
+.theme-radio input[type="radio"] {
 	display: none;
 }
 
-.form-basic label:has(input[type="radio"]) {
-	padding: 14px 0px;
+.theme-radio label:has(input[type="radio"]) {
+	padding: 14px;
 	border-radius: 10px;
 }
 
-.form-basic label:has([type="radio"]:checked) {
+.theme-radio label:has([type="radio"]:checked) {
 	color: var(--color-white);
 	background: linear-gradient(to left, var(--color-primary), var(--color-secondary)) !important;
 }
 
-.form-basic label:has([type="radio"]:checked:hover) {
+.theme-radio label:has([type="radio"]:checked:hover) {
 	border-color: var(--color-white) !important;
 }
 
 /*--------------------------
     4.5 Select One option   
 --------------------------*/
+.bg-white-grey-90{
+	background-color: var(--color-white-grey-90);
+}
+.min-wh-53{
+	min-width: 53px;
+    min-height: 53px;
+}
+
 /*--------------------------------
     4.6 Select Multiple options    
 --------------------------------*/
