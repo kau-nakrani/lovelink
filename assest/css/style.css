@@ -183,6 +183,7 @@ p {
 .font-weight-5 {
 	font-weight: var(--font-weight-500);
 }
+
 .display-center {
 	display: flex;
 	justify-content: center;
@@ -197,20 +198,24 @@ a:hover {
    1.3 Form   
 --------------------------*/
 input[type="text"],
-input[type="text"]:hover,
-input[type="text"]:focus,
-input[type="text"]:active,
-input[type="text"]:focus-visible{
+input[type="text"]:active
+input[type="text"]:focus-visible,
+select,
+select:focus-visible,
+input[type="text"]:focus-visible {
 	background: var(--color-white-grey);
 	border: 1px solid #E8E2E4 !important;
 	border-radius: 11px;
 	padding: 20px 22px !important;
+	outline: none;
 }
 
 input[type="text"]:hover,
 input[type="text"]:focus,
-.multisteup-card .iti__flag-container:hover,
-.multisteup-card .iti__flag-container:focus {
+select:hover,
+.multi-steup-card .iti__flag-container:hover,
+.multi-steup-card .iti__flag-container:focus,
+.form-basic label:has(input[type="radio"]:hover) {
 	background: linear-gradient(var(--color-white-grey), var(--color-white-grey)), linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);
 	border: 1px solid transparent !important;
 	background-origin: border-box;
@@ -220,7 +225,9 @@ input[type="text"]:focus,
 }
 
 
-
+.grid-cols-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
 /************************************
 	02. Elemnts Styles
@@ -322,14 +329,14 @@ input[type="text"]:focus,
     4.1 Phone Number    
 --------------------------*/
 
-.multisteups {
+.multi-steups {
 	background-image: url("../images/backgrounds/backgroun_heart_pattern_second.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover
 }
 
-.multisteups .container {
+.multi-steups .container {
 	min-height: 100vh;
 	padding: 51px 15px;
 	overflow: overlay;
@@ -338,7 +345,7 @@ input[type="text"]:focus,
 	justify-content: center;
 }
 
-.multisteup-card {
+.multi-steup-card {
 	padding: 75px 75px 170px;
 	max-width: 663px;
 	min-height: 594px;
@@ -347,25 +354,26 @@ input[type="text"]:focus,
 	margin: auto;
 }
 
-.multisteup-card:hover {
+.multi-steup-card:hover {
 	box-shadow: 0px 13px 13px 0px #BE373712;
 	transition: 0.5s;
 }
 
-.multisteup-card-one{
+.multi-steup-card-one {
 	padding: 75px;
 }
+
 .iti {
 	width: 100%;
 	display: flex;
 }
 
-.multisteup-card #mobile_code {
+.multi-steup-card #mobile_code {
 	margin-left: 3%;
 	border: none;
 }
 
-.multisteup-card .iti__flag-container {
+.multi-steup-card .iti__flag-container {
 	border-radius: 11px;
 	padding: 20px 10px;
 	background: var(--color-white-grey);
@@ -374,8 +382,8 @@ input[type="text"]:focus,
 	border: 1px solid #E8E2E4 !important;
 }
 
-.multisteup-card .iti--separate-dial-code .iti__selected-flag,
-.multisteup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+.multi-steup-card .iti--separate-dial-code .iti__selected-flag,
+.multi-steup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
 	background-color: unset;
 }
 
@@ -390,20 +398,54 @@ input[type="text"]:focus,
 /*--------------------------
     4.3 Introduction  
 --------------------------*/
-.svg-filter{
-	webkit-filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
-    filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
+.svg-filter {
+	--webkit-filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
+	filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
 }
-.info-list-data svg{
+
+.info-list-data svg {
 	min-width: 13px;
-    min-height: 14px;
+	min-height: 14px;
 }
-.info-list-data p{
+
+.info-list-data p {
 	margin-bottom: 0px;
 }
+
 /*--------------------------
     4.4 Basic Information    
 --------------------------*/
+.form-basic label:has(input[type="radio"]) {
+	z-index: 10;
+	position: relative;
+	color: var(--color-black);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	font-weight: bold;
+	background-color: var(--color-white-grey);
+	border: 1px solid var(--color-white-grey);
+	cursor: pointer;
+	transition: all 200ms ease;
+	min-height: 53px;
+}
+
+.form-basic input[type="radio"] {
+	display: none;
+}
+
+.form-basic label:has(input[type="radio"]) {
+	padding: 14px 0px;
+	border-radius: 10px;
+}
+
+.form-basic label:has([type="radio"]:checked) {
+	color: var(--color-white);
+	background: linear-gradient(to left, var(--color-primary), var(--color-secondary)) !important;
+}
+
+.form-basic label:has([type="radio"]:checked:hover) {
+	border-color: var(--color-white) !important;
+}
+
 /*--------------------------
     4.5 Select One option   
 --------------------------*/

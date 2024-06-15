@@ -1,32 +1,44 @@
 /******** JS INDEX *********
+ * 
   1.Multi step form
     1.1 Phone Number
     1.2 Preview and Next button
     1.3 OTP Number
+
 ******** JS INDEX *********/
 
 (function ($) {
-  //1.1 Phone Number
+  /*--------------------------
+  1.1 Phone Number
+--------------------------*/
+
   $("#mobile_code").intlTelInput({
     initialCountry: "in",
     separateDialCode: true,
   });
 
-  //1.2 Preview and Next button
+  /*-----------------------------
+  1.2 Preview and Next button
+-----------------------------*/
 
   //Preview button for multi step form
-    jQuery(document).on("click", "#prevbtn", function (e) {
+  jQuery(document).on("click", "#prevbtn", function (e) {
     e.preventDefault();
     let PreviewButton = jQuery("#multiplesteup .active ").data("pre-steup");
- 
+
     //index.html
     if (PreviewButton == "index.html") {
       window.location.replace(PreviewButton);
-    }else{
-      jQuery("#multiplesteup section").hide().removeClass("active").addClass("d-none");
-      jQuery("#multiplesteup ." + PreviewButton).show().addClass("active").removeClass("d-none");
+    } else {
+      jQuery("#multiplesteup section")
+        .hide()
+        .removeClass("active")
+        .addClass("d-none");
+      jQuery("#multiplesteup ." + PreviewButton)
+        .show()
+        .addClass("active")
+        .removeClass("d-none");
     }
-
   });
 
   //Next button for multi step form
@@ -36,15 +48,20 @@
     let nextClass = jQuery("#multiplesteup ." + NextButton).length;
     //index.html
     if (NextButton !== "" && nextClass > 0) {
-      jQuery("#multiplesteup section").hide().removeClass("active").addClass("d-none");
-      jQuery("#multiplesteup ." + NextButton).show().addClass("active").removeClass("d-none");
+      jQuery("#multiplesteup section")
+        .hide()
+        .removeClass("active")
+        .addClass("d-none");
+      jQuery("#multiplesteup ." + NextButton)
+        .show()
+        .addClass("active")
+        .removeClass("d-none");
     }
   });
 
-  /************************************
-	1.3. OTP Number
-************************************/
-
+  /*-----------------------------
+  1.3. OTP Number
+-----------------------------*/
   /*---------Past Number-----------*/
 
   document.querySelector(".otpnumber").addEventListener("paste", function (e) {
@@ -76,4 +93,13 @@
       }
     }
   });
+
+  /*-----------------------------
+  1.4. Year Increase
+-----------------------------*/
+  let startYear = 1990;
+  let endYear = new Date().getFullYear();
+  for (i = endYear; i > startYear; i--) {
+    $("#yearpicker").append($("<option />").val(i).html(i));
+  }
 })(jQuery);
