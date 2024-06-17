@@ -102,14 +102,18 @@
                             <!-- OTP Number -->
                             <div class="form-group py-sm-5 py-4">
                                 <div class="form-group border-radius-8 mb-sm-0 mb-2 w-100 display-center gap-3">
-                                    <input type="text" id="otp1" class="form-control otpnumber fw-bolder" tabindex="1"
-                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input type="text" id="otp2" class="form-control otpnumber fw-bolder" tabindex="2"
-                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input type="text" id="otp3" class="form-control otpnumber fw-bolder" tabindex="3"
-                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                                    <input type="text" id="otp4" class="form-control otpnumber fw-bolder" tabindex="4"
-                                        name="opt" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp1" class="form-control otpnumber fw-bolder text-center"
+                                        tabindex="1" name="opt" maxlength="1"
+                                        oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp2" class="form-control otpnumber fw-bolder text-center"
+                                        tabindex="2" name="opt" maxlength="1"
+                                        oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp3" class="form-control otpnumber fw-bolder text-center"
+                                        tabindex="3" name="opt" maxlength="1"
+                                        oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                    <input type="text" id="otp4" class="form-control otpnumber fw-bolder text-center"
+                                        tabindex="4" name="opt" maxlength="1"
+                                        oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                                 </div>
                             </div>
                             <!-- Step 2 description -->
@@ -482,7 +486,7 @@
                 </section>
 
                 <!-- Step 6 -->
-                <section class="multi-steup-card-one multi-steup-card step-6 bg-white mb-5 text-center"
+                <section class="multi-steup-card-one multi-steup-card step-6 bg-white mb-5 text-center d-none"
                     data-pre-steup="step-5" data-next-steup="step-7">
                     <div class="row">
                         <div class="col-12">
@@ -534,6 +538,60 @@
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
                                         <input type="checkbox" id="ori-check-7" name="check-7" value="bisexual"><span
                                             class="text-start mx-sm-3 mx-1 font-weight-5">Bisexual</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+                <!-- Step 7 -->
+                <section class="multi-steup-card-one multi-steup-card step-7 bg-white mb-5 text-center"
+                    data-pre-steup="step-6" data-next-steup="step-8">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Step 6 icon -->
+                            <div class="themeicon rounded-circle mx-auto display-center">
+                                <svg class="sm-svg" width="37" height="44" viewBox="0 0 37 44" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.2041 5.57789C15.259 5.56975 12.4022 6.58288 10.1203 8.4447L8.83256 7.15795L9.44471 6.54638C9.69364 6.29751 9.83351 5.95996 9.83356 5.60797C9.83361 5.25597 9.69382 4.91838 9.44496 4.66945C9.1961 4.42052 8.85854 4.28065 8.50655 4.2806C8.15456 4.28056 7.81696 4.42034 7.56804 4.6692L6.9553 5.28127L4.9134 3.23878H9.49033C9.84232 3.23878 10.1799 3.09895 10.4288 2.85007C10.6777 2.60118 10.8175 2.26361 10.8175 1.91163C10.8175 1.55964 10.6777 1.22208 10.4288 0.973187C10.1799 0.724297 9.84232 0.584473 9.49033 0.584473H1.70882C1.35695 0.584714 1.01956 0.72463 0.770793 0.973479C0.522022 1.22233 0.382212 1.55976 0.38208 1.91163V9.69206C0.38208 10.044 0.521905 10.3816 0.770794 10.6305C1.01968 10.8794 1.35725 11.0192 1.70923 11.0192C2.06122 11.0192 2.39878 10.8794 2.64767 10.6305C2.89656 10.3816 3.03639 10.044 3.03639 9.69206V5.11595L5.07929 7.15795L4.46714 7.77001C4.34098 7.89261 4.24046 8.03907 4.17141 8.20087C4.10236 8.36267 4.06617 8.53658 4.06494 8.71249C4.06371 8.8884 4.09746 9.06281 4.16424 9.22555C4.23102 9.3883 4.32948 9.53615 4.45391 9.66051C4.57834 9.78486 4.72625 9.88323 4.88904 9.94991C5.05184 10.0166 5.22626 10.0502 5.40217 10.0489C5.57808 10.0476 5.75197 10.0113 5.91373 9.94211C6.07548 9.87296 6.22188 9.77234 6.3444 9.64611L6.9553 9.03512L8.24356 10.3225C6.78629 12.1162 5.841 14.2704 5.50768 16.5573C5.17436 18.8442 5.46542 21.1787 6.35006 23.3138C7.2347 25.4488 8.68002 27.305 10.5331 28.686C12.3862 30.067 14.5781 30.9214 16.8769 31.1588V34.489H12.2943C11.9423 34.489 11.6047 34.6288 11.3558 34.8777C11.1069 35.1266 10.9671 35.4642 10.9671 35.8162C10.9671 36.1681 11.1069 36.5057 11.3558 36.7546C11.6047 37.0035 11.9423 37.1433 12.2943 37.1433H16.8769V41.7262C16.8769 42.0782 17.0168 42.4158 17.2657 42.6647C17.5145 42.9136 17.8521 43.0534 18.2041 43.0534C18.5561 43.0534 18.8936 42.9136 19.1425 42.6647C19.3914 42.4158 19.5312 42.0782 19.5312 41.7262V37.1434H24.1141C24.4661 37.1434 24.8036 37.0036 25.0525 36.7547C25.3014 36.5058 25.4412 36.1682 25.4412 35.8162C25.4412 35.4643 25.3014 35.1267 25.0525 34.8778C24.8036 34.6289 24.4661 34.4891 24.1141 34.4891H19.5312V31.1588C21.8295 30.9202 24.0206 30.0652 25.8729 28.684C27.7252 27.3028 29.1699 25.4468 30.0544 23.3122C30.9388 21.1776 31.23 18.8436 30.8973 16.5571C30.5646 14.2706 29.6203 12.1165 28.1642 10.3225L33.3716 5.1162V9.69206C33.3716 10.044 33.5115 10.3816 33.7603 10.6305C34.0092 10.8794 34.3468 11.0192 34.6988 11.0192C35.0508 11.0192 35.3883 10.8794 35.6372 10.6305C35.8861 10.3816 36.0259 10.044 36.0259 9.69206V1.91163C36.0259 1.55969 35.8861 1.22216 35.6373 0.973275C35.3885 0.724392 35.051 0.584539 34.699 0.584473H26.9175C26.5655 0.584473 26.228 0.724297 25.9791 0.973187C25.7302 1.22208 25.5904 1.55964 25.5904 1.91163C25.5904 2.26361 25.7302 2.60118 25.9791 2.85007C26.228 3.09895 26.5655 3.23878 26.9175 3.23878H31.4944L26.2882 8.44495C24.0062 6.58307 21.1493 5.56985 18.2041 5.57789ZM21.2042 12.6762C21.7726 12.6748 22.3356 12.7861 22.8608 13.0037C23.3859 13.2213 23.8626 13.5409 24.2634 13.9439C25.2121 14.8926 25.6263 16.0855 25.461 17.3926C25.0213 20.8722 20.5605 24.2142 18.8794 25.2079C18.675 25.3289 18.4418 25.3928 18.2042 25.3928C17.9666 25.3928 17.7334 25.3289 17.529 25.2079C15.8473 24.2142 11.3865 20.8722 10.9468 17.3926C10.7821 16.0855 11.1956 14.8926 12.145 13.9439C12.946 13.1427 14.0295 12.6876 15.1624 12.6765C16.2954 12.6655 17.3875 13.0992 18.2041 13.8847C19.0088 13.1068 20.085 12.6734 21.2042 12.6764V12.6762ZM22.8278 17.0599C22.6103 18.7837 20.1909 21.1415 18.2041 22.492C16.2178 21.1415 13.7978 18.7837 13.5809 17.0599C13.5187 16.5693 13.6544 16.1872 14.0217 15.8209C14.1769 15.6654 14.3612 15.542 14.5641 15.4578C14.767 15.3736 14.9845 15.3302 15.2042 15.3302C15.4239 15.3302 15.6414 15.3736 15.8444 15.4578C16.0473 15.542 16.2316 15.6654 16.3867 15.8209C16.5015 15.94 16.6095 16.0654 16.7102 16.1966C16.8608 16.3821 17.0296 16.5919 17.2489 16.8182C17.3726 16.9467 17.521 17.049 17.6852 17.1188C17.8494 17.1886 18.026 17.2246 18.2044 17.2246C18.3828 17.2246 18.5594 17.1886 18.7236 17.1188C18.8877 17.049 19.0361 16.9467 19.1599 16.8182C19.3785 16.5919 19.548 16.3821 19.6973 16.1972C19.7987 16.0662 19.9069 15.9406 20.0215 15.8209C20.1766 15.6654 20.3609 15.542 20.5638 15.4578C20.7667 15.3736 20.9842 15.3302 21.2039 15.3302C21.4236 15.3302 21.6411 15.3736 21.844 15.4578C22.0469 15.542 22.2312 15.6654 22.3864 15.8209C22.7536 16.1874 22.8899 16.5695 22.8276 17.0602L22.8278 17.0599Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <!-- Step 6 Title -->
+                            <h2 class="pt-4 text-black">What are you doing in your daily routine?</h2>
+                            <!-- Step 6 Options -->
+                            <div class="py-sm-5 py-4 text-start checkbox-style-one">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <label for="rou-check-1"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="rou-check-1" name="rou-check-1" value="tea"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Tea</span>
+                                    </label>
+                                    <label for="rou-check-2"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="rou-check-2" name="rou-check-2" value="brunch"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Brunch</span>
+                                    </label>
+                                    <label for="rou-check-3"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="rou-check-3" name="rou-check-3" value="coffee"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Coffee</span>
+                                    </label>
+                                    <label for="rou-check-4"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="rou-check-4" name="rou-check-4" value="shopping"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Shopping</span>
+                                    </label>
+                                    <label for="rou-check-5"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="rou-check-5" name="rou-check-5" value="instagram"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Instagram</span>
+                                    </label>
+                                    <label for="rou-check-6"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="rou-check-6" name="rou-check-6" value="football"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Football</span>
                                     </label>
                                 </div>
                             </div>

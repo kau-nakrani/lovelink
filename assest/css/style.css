@@ -57,18 +57,14 @@
   --color-black: #000;
   --color-blue: #1e68f7;
   --color-dark-charcoal: #333333;
-  --linear-gradient-left: linear-gradient(
-    to left,
-    var(--color-secondary),
-    var(--color-primary),
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  --linear-gradient-left-second: linear-gradient(
-    to left,
-    var(--color-primary),
-    var(--color-secondary)
-  );
+  --linear-gradient-left: linear-gradient(to left,
+      var(--color-secondary),
+      var(--color-primary),
+      var(--color-primary),
+      var(--color-secondary));
+  --linear-gradient-left-second: linear-gradient(to left,
+      var(--color-primary),
+      var(--color-secondary));
 
   /* Font Family */
   --font-primary: "Poppins", sans-serif;
@@ -223,7 +219,7 @@ select:hover,
 .theme-radio label:has(input[type="radio"]:hover),
 .checkbox-style-one label:hover,
 .checkbox-style-one input[type="checkbox"]:checked,
-.checkbox-style-one input[type="checkbox"]:checked + label {
+.checkbox-style-one input[type="checkbox"]:checked+label {
   background: linear-gradient(var(--color-white-grey), var(--color-white-grey)),
     linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);
   border: 1px solid transparent !important;
@@ -239,9 +235,11 @@ select:hover,
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -393,12 +391,10 @@ select:hover,
 }
 
 .multi-steup-card .iti--separate-dial-code .iti__selected-flag,
-.multi-steup-card
-  .iti--allow-dropdown
-  .iti__flag-container:hover
-  .iti__selected-flag {
+.multi-steup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
   background-color: unset;
 }
+
 .iti__selected-dial-code {
   display: none;
 }
@@ -455,11 +451,9 @@ select:hover,
 
 .theme-radio label:has([type="radio"]:checked) {
   color: var(--color-white);
-  background: linear-gradient(
-    to left,
-    var(--color-primary),
-    var(--color-secondary)
-  ) !important;
+  background: linear-gradient(to left,
+      var(--color-primary),
+      var(--color-secondary)) !important;
 }
 
 .theme-radio label:has([type="radio"]:checked:hover) {
@@ -472,6 +466,7 @@ select:hover,
 .bg-white-grey-90 {
   background-color: var(--color-white-grey-90);
 }
+
 .min-wh-53 {
   min-width: 53px;
   min-height: 53px;
@@ -490,6 +485,7 @@ select:hover,
   border-radius: 10px;
   cursor: pointer;
 }
+
 .checkbox-style-one input[type="checkbox"]::before {
   content: "\2713";
   display: block;
@@ -502,6 +498,7 @@ select:hover,
   height: 100%;
   border-radius: 50%;
 }
+
 .checkbox-style-one input {
   min-height: 0;
 }
@@ -520,11 +517,9 @@ select:hover,
 }
 
 .checkbox-style-one input[type="checkbox"]:checked {
-  background: linear-gradient(
-      to left,
+  background: linear-gradient(to left,
       var(--color-primary),
-      var(--color-secondary)
-    ),
+      var(--color-secondary)),
     linear-gradient(90deg, #ff8f28 0%, #f41781 98%);
   box-shadow: none;
   border: none;
@@ -550,6 +545,7 @@ select:hover,
   height: 100%;
   border-radius: 50%;
 }
+
 /*--------------------------
     4.7 Image Upload's   
 --------------------------*/
