@@ -16,11 +16,11 @@
 		1.1 Variables 
 		1.2 General & Basic
 		1.3 Form
+		1.4 grid's
 		
 	02. Elemnts Styles
 		2.1 Button's
-		2.2 Paragraph 
-		2.3 Icons's
+		2.2 Icons's
 	
 	03. Welcome Styles
 	
@@ -42,59 +42,63 @@
     1.1 Variables   
 --------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 :root,
-[data-bs-theme=light] {
+[data-bs-theme="light"] {
+  /* Theme Colors */
+  --color-primary: #f41781;
+  --color-secondary: #ff8f28;
+  --color-white: #fff;
+  --color-white-grey: #f6f6f6;
+  --color-white-grey-90: #e5e5e5;
+  --color-gray: #808080;
+  --color-gray-30: #4d4d4d;
+  --color-black: #000;
+  --color-blue: #1e68f7;
+  --color-dark-charcoal: #333333;
+  --linear-gradient-left: linear-gradient(
+    to left,
+    var(--color-secondary),
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --linear-gradient-left-second: linear-gradient(
+    to left,
+    var(--color-primary),
+    var(--color-secondary)
+  );
 
-	/* Theme Colors */
-	--color-primary: #F41781;
-	--color-secondary: #FF8F28;
-	--color-white: #fff;
-	--color-white-grey: #F6F6F6;
-	--color-white-grey-90:#E5E5E5;
-	--color-gray: #808080;
-	--color-gray-30: #4D4D4D;
-	--color-black: #000;
-	--color-blue: #1e68f7;
-	--color-dark-charcoal: #333333;
-	--linear-gradient-left: linear-gradient(to left, var(--color-secondary), var(--color-primary), var(--color-primary), var(--color-secondary));
-	--linear-gradient-left-second: linear-gradient(to left, var(--color-primary), var(--color-secondary));
+  /* Font Family */
+  --font-primary: "Poppins", sans-serif;
 
-	/* Font Family */
-	--font-primary: 'Poppins', sans-serif;
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-extra-bold: 800;
 
-	/* Font Weight */
-	--font-weight-400: 400;
-	--font-weight-500: 500;
-	--font-weight-600: 600;
-	--font-weight-800: 800;
+  /* Font Size */
+  --font-size-15: 15px;
+  --h1: 66px;
+  --h2: 25px;
+  --h3: 21px;
+  --h4: 18px;
 
-	/* Font Size */
-	--font-size-20: 20px;
-	--font-size-18: 18px;
-	--font-size-16: 16px;
-	--font-size-15: 15px;
-	--font-size-14: 14px;
-	--font-size-13: 13px;
-	--h1: 66px;
-	--h2: 25px;
-	--h3: 21px;
+  /* Font Line height */
+  --font-line-height-92: 92px;
+  --font-line-height-37: 37px;
+  --font-line-height-33: 33px;
+  --font-line-height-30: 30px;
+  --font-line-height-25: 25px;
+  --font-line-height-27: 27px;
+  --font-line-height-22: 22px;
+  --font-line-height-19: 19px;
 
-	/* Font Line height */
-	--font-line-height-92: 92px;
-	--font-line-height-37: 37px;
-	--font-line-height-33: 33px;
-	--font-line-height-30: 30px;
-	--font-line-height-25: 25px;
-	--font-line-height-27: 27px;
-	--font-line-height-22: 22px;
-	--font-line-height-19: 19px;
-
-	/* Font Letter Spacing */
-	--font-letter-spacing-2: 2%;
-	--font-letter-spacing-9: 9%;
-
+  /* Font Letter Spacing */
+  --font-letter-spacing-2: 2%;
+  --font-letter-spacing-9: 9%;
 }
 
 /*--------------------------
@@ -103,11 +107,11 @@
 
 html,
 body {
-	font-family: var(--font-primary);
-	font-weight: var(--font-weight-400);
-	font-size: var(--font-size-16);
-	line-height: var(--font-line-height-25);
-	color: var(--color-dark-charcoal);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-25);
+  color: var(--color-dark-charcoal);
 }
 
 h1,
@@ -116,99 +120,99 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-primary);
+  font-family: var(--font-primary);
 }
 
 h1 {
-	font-weight: var(--font-weight-800);
-	font-size: var(--h1);
-	line-height: var(--font-line-height-92);
-	letter-spacing: var(--font-letter-spacing-2);
+  font-weight: var(--font-weight-extra-bold);
+  font-size: var(--h1);
+  line-height: var(--font-line-height-92);
+  letter-spacing: var(--font-letter-spacing-2);
 }
 
 h2 {
-	font-weight: var(--font-weight-600);
-	font-size: var(--h2);
-	line-height: var(--font-line-height-37);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--h2);
+  line-height: var(--font-line-height-37);
 }
 
 h3 {
-	font-weight: var(--font-weight-600);
-	font-size: var(--h3);
-	line-height: var(--font-line-height-30);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--h3);
+  line-height: var(--font-line-height-30);
 }
 
 p {
-	font-family: var(--font-primary);
-	font-weight: var(--font-weight-400);
-	font-size: var(--font-size-15);
-	line-height: var(--font-line-height-25);
-	color: var(--color-dark-charcoal);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-25);
+  color: var(--color-dark-charcoal);
 }
 
 .text-primary {
-	color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
 }
 
 .text-orange {
-	color: var(--color-secondary) !important;
+  color: var(--color-secondary) !important;
 }
 
 .text-black {
-	color: var(--color-black) !important;
+  color: var(--color-black) !important;
 }
 
 .color-gray {
-	color: var(--color-gray) !important;
+  color: var(--color-gray) !important;
 }
 
 .py-80 {
-	padding: 80px 0;
+  padding: 80px 0;
 }
 
 .max-width-content {
-	max-width: fit-content;
+  max-width: fit-content;
 }
 
 .btn-theme:hover {
-	background-position: right center;
-	transition: all 0.4s ease-in-out;
-	box-shadow: 0px 2px 10px rgb(244 23 129 / 14%), 0px 0px 20px rgb(255 143 40 / 14%);
-	color: var(--color-white);
+  background-position: right center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 2px 10px rgb(244 23 129 / 14%),
+    0px 0px 20px rgb(255 143 40 / 14%);
+  color: var(--color-white);
 }
 
 .font-weight-6 {
-	font-weight: var(--font-weight-600);
+  font-weight: var(--font-weight-semi-bold);
 }
 
 .font-weight-5 {
-	font-weight: var(--font-weight-500);
+  font-weight: var(--font-weight-medium);
 }
 
 .display-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a:hover {
-	color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 /*--------------------------
    1.3 Form   
 --------------------------*/
 input[type="text"],
-input[type="text"]:active
-input[type="text"]:focus-visible,
+input[type="text"]:active input[type="text"]:focus-visible,
 select,
 select:focus-visible,
 input[type="text"]:focus-visible {
-	background: var(--color-white-grey);
-	border: 1px solid #E8E2E4 !important;
-	border-radius: 11px;
-	padding: 20px 22px !important;
-	outline: none;
+  background: var(--color-white-grey);
+  border: 1px solid #e8e2e4 !important;
+  border-radius: 11px;
+  padding: 20px 22px !important;
+  outline: none;
 }
 
 input[type="text"]:hover,
@@ -216,24 +220,30 @@ input[type="text"]:focus,
 select:hover,
 .multi-steup-card .iti__flag-container:hover,
 .multi-steup-card .iti__flag-container:focus,
-.theme-radio label:has(input[type="radio"]:hover) {
-	background: linear-gradient(var(--color-white-grey), var(--color-white-grey)), linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);
-	border: 1px solid transparent !important;
-	background-origin: border-box;
-	background-clip: padding-box, border-box;
-	outline: none;
-	box-shadow: 0px 6px 12px 0px rgb(0 0 0 / 8%);
+.theme-radio label:has(input[type="radio"]:hover),
+.checkbox-style-one label:hover,
+.checkbox-style-one input[type="checkbox"]:checked,
+.checkbox-style-one input[type="checkbox"]:checked + label {
+  background: linear-gradient(var(--color-white-grey), var(--color-white-grey)),
+    linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 98%);
+  border: 1px solid transparent !important;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  outline: none;
+  box-shadow: 0px 6px 12px 0px rgb(0 0 0 / 8%);
 }
 
 /*--------------------------
-    grid's   
+    1.4 grid's  
 --------------------------*/
-
-.grid-cols-3 {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 .grid-cols-2 {
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 /************************************
@@ -243,90 +253,83 @@ select:hover,
     2.1 Button's   
 --------------------------*/
 .btn-theme {
-	display: flex;
-	gap: 5px;
-	padding: 16px 35px 16px 35px;
-	border-radius: 10px;
-	background: var(--linear-gradient-left);
-	color: var(--color-white);
-	background-size: 300% 100%;
-	transition: all 500ms ease-in-out;
-	align-items: center;
-	text-decoration: none;
-	position: relative;
+  display: flex;
+  gap: 5px;
+  padding: 16px 35px 16px 35px;
+  border-radius: 10px;
+  background: var(--linear-gradient-left);
+  color: var(--color-white);
+  background-size: 300% 100%;
+  transition: all 500ms ease-in-out;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
 }
 
 .btn-theme-steup {
-	width: 234px;
+  width: 234px;
 }
 
 .btn-theme-1,
 .btn-theme-1:hover {
-	background: transparent;
-	color: var(--color-secondary);
-	border: 1px solid var(--color-secondary);
+  background: transparent;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
 
 /*--------------------------
-    2.2 Paragraph   
---------------------------*/
-.par-text {
-	font-size: var(--font-line-height-19);
-}
-
-/*--------------------------
-    2.3 Icons's   
+    2.2 Icons's   
 --------------------------*/
 .themeicon {
-	background: var(--linear-gradient-left-second);
-	box-shadow: 0px 10px 19px 0px #2C030B26;
-	width: fit-content;
-	min-width: 82px;
-	min-height: 82px
+  background: var(--linear-gradient-left-second);
+  box-shadow: 0px 10px 19px 0px #2c030b26;
+  width: fit-content;
+  min-width: 82px;
+  min-height: 82px;
 }
 
 /************************************
 	03. Welcome Styles
 ************************************/
 .welcome-wrapper {
-	position: relative;
-	background-image: url("../images/backgrounds/backgroun_heart_pattern.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 100vh;
-	overflow: hidden;
-	align-items: center;
+  position: relative;
+  background-image: url("../images/backgrounds/backgroun_heart_pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  align-items: center;
 }
 
 .btn-gl,
 .btn-gl:hover {
-	background: var(--color-white);
-	color: var(--color-black);
-	box-shadow: none;
+  background: var(--color-white);
+  color: var(--color-black);
+  box-shadow: none;
 }
 
 .btn-fb,
 .btn-fb:hover {
-	background: var(--color-blue);
-	color: var(--color-white);
-	box-shadow: none;
+  background: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: none;
 }
 
 .btn-gl:hover {
-	background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 .btn-fb:hover {
-	background: #074bcd;
+  background: #074bcd;
 }
 
 .social-btn {
-	max-width: 25rem;
-	width: 100%;
+  max-width: 25rem;
+  width: 100%;
 }
 
 .align-image-center {
-	align-items: center;
+  align-items: center;
 }
 
 /************************************
@@ -337,139 +340,216 @@ select:hover,
 --------------------------*/
 
 .multi-steups {
-	background-image: url("../images/backgrounds/backgroun_heart_pattern_second.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover
+  background-image: url("../images/backgrounds/backgroun_heart_pattern_second.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .multi-steups .container {
-	min-height: 100vh;
-	padding: 51px 15px;
-	overflow: overlay;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  min-height: 100vh;
+  padding: 51px 15px;
+  overflow: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .multi-steup-card {
-	padding: 75px 75px 170px;
-	max-width: 663px;
-	min-height: 594px;
-	border-radius: 39px;
-	overflow: hidden;
-	margin: auto;
+  padding: 75px 75px 170px;
+  max-width: 663px;
+  min-height: 594px;
+  border-radius: 39px;
+  overflow: hidden;
+  margin: auto;
 }
 
 .multi-steup-card:hover {
-	box-shadow: 0px 13px 13px 0px #BE373712;
-	transition: 0.5s;
+  box-shadow: 0px 13px 13px 0px #be373712;
+  transition: 0.5s;
 }
 
 .multi-steup-card-one {
-	padding: 75px;
+  padding: 75px;
 }
 
 .iti {
-	width: 100%;
-	display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .multi-steup-card #mobile_code {
-	margin-left: 3%;
-	border: none;
+  margin-left: 3%;
+  border: none;
 }
 
 .multi-steup-card .iti__flag-container {
-	border-radius: 11px;
-	padding: 20px 10px;
-	background: var(--color-white-grey);
-	position: relative;
-	max-width: 100%;
-	border: 1px solid #E8E2E4 !important;
+  border-radius: 11px;
+  padding: 20px 10px;
+  background: var(--color-white-grey);
+  position: relative;
+  max-width: 100%;
+  border: 1px solid #e8e2e4 !important;
 }
 
 .multi-steup-card .iti--separate-dial-code .iti__selected-flag,
-.multi-steup-card .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
-	background-color: unset;
+.multi-steup-card
+  .iti--allow-dropdown
+  .iti__flag-container:hover
+  .iti__selected-flag {
+  background-color: unset;
 }
-.iti__selected-dial-code{
-	display: none;
+.iti__selected-dial-code {
+  display: none;
 }
 
 /*--------------------------
     4.2 OPT
 --------------------------*/
 .otpnumber {
-	max-height: 62px;
-	max-width: 62px;
+  max-height: 62px;
+  max-width: 62px;
 }
 
 /*--------------------------
     4.3 Introduction  
 --------------------------*/
 .svg-filter {
-	--webkit-filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
-	filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
+  --webkit-filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
+  filter: drop-shadow(0px 10px 19px rgb(44 3 11 / 15%));
 }
 
 .info-list-data svg {
-	min-width: 13px;
-	min-height: 14px;
+  min-width: 13px;
+  min-height: 14px;
 }
 
 .info-list-data p {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 /*--------------------------
     4.4 Basic Information    
 --------------------------*/
 .theme-radio label:has(input[type="radio"]) {
-	z-index: 10;
-	position: relative;
-	color: var(--color-black);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-	font-weight: bold;
-	background-color: var(--color-white-grey);
-	border: 1px solid var(--color-white-grey);
-	cursor: pointer;
-	transition: all 200ms ease;
-	min-height: 53px;
+  z-index: 10;
+  position: relative;
+  color: var(--color-black);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  background-color: var(--color-white-grey);
+  border: 1px solid var(--color-white-grey);
+  cursor: pointer;
+  transition: all 200ms ease;
+  min-height: 53px;
 }
 
 .theme-radio input[type="radio"] {
-	display: none;
+  display: none;
 }
 
 .theme-radio label:has(input[type="radio"]) {
-	padding: 14px;
-	border-radius: 10px;
+  padding: 14px;
+  border-radius: 10px;
 }
 
 .theme-radio label:has([type="radio"]:checked) {
-	color: var(--color-white);
-	background: linear-gradient(to left, var(--color-primary), var(--color-secondary)) !important;
+  color: var(--color-white);
+  background: linear-gradient(
+    to left,
+    var(--color-primary),
+    var(--color-secondary)
+  ) !important;
 }
 
 .theme-radio label:has([type="radio"]:checked:hover) {
-	border-color: var(--color-white) !important;
+  border-color: var(--color-white) !important;
 }
 
 /*--------------------------
     4.5 Select One option   
 --------------------------*/
-.bg-white-grey-90{
-	background-color: var(--color-white-grey-90);
+.bg-white-grey-90 {
+  background-color: var(--color-white-grey-90);
 }
-.min-wh-53{
-	min-width: 53px;
-    min-height: 53px;
+.min-wh-53 {
+  min-width: 53px;
+  min-height: 53px;
 }
 
 /*--------------------------------
     4.6 Select Multiple options    
 --------------------------------*/
+.checkbox-style-one label {
+  text-align: left;
+  border: 1px solid var(--color-gray);
+  padding: 13px 10px;
+  margin: 0 0 16px;
+  display: block;
+  background-color: var(--color-white-grey);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.checkbox-style-one input[type="checkbox"]::before {
+  content: "\2713";
+  display: block;
+  color: #cccccc;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.checkbox-style-one input {
+  min-height: 0;
+}
+
+.checkbox-style-one input[type="checkbox"] {
+  min-width: 21px;
+  min-height: 21px;
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+  appearance: none;
+  background-color: var(--color-white-grey-90);
+  border: 1px solid #cccccc;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-style-one input[type="checkbox"]:checked {
+  background: linear-gradient(
+      to left,
+      var(--color-primary),
+      var(--color-secondary)
+    ),
+    linear-gradient(90deg, #ff8f28 0%, #f41781 98%);
+  box-shadow: none;
+  border: none;
+}
+
+.checkbox-style-one input[type="checkbox"]:checked::before {
+  color: var(--color-white);
+  top: 1px;
+}
+
+.checkbox-style-one input[type="checkbox"]::before {
+  content: "\2713";
+  display: block;
+  color: #cccccc;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
 /*--------------------------
     4.7 Image Upload's   
 --------------------------*/

@@ -48,23 +48,49 @@
   .grid-cols-sm-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .grid-cols-sm-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 24px;
+    font-size: 27px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
-
-  .btn-theme {
-    padding: 16px
+  h3 {
+    font-size: 19px;
   }
-
-  .par-text {
+  h4 {
     font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .sm-svg {
+    height: 25px;
+    width: 25px;
+  }
+  .sm-svg-15 {
+    height: 15px;
+    width: 15px;
+  }
+  .min-wh-53 {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .themeicon {
+    min-height: 65px;
+    min-width: 65px;
+  }
+  .btn-theme-steup {
+    width: 160px;
+  }
+  .btn-theme {
+    padding: 16px;
   }
 
   .py-80 {
@@ -72,7 +98,7 @@
   }
 
   .multi-steup-card {
-    padding: 25px;
+    padding: 30px 25px;
   }
 
   .multi-steups .container {
@@ -85,10 +111,12 @@
   select:focus-visible,
   input[type="text"]:focus-visible {
     padding: 15px 15px !important;
+    font-size: 12px;
   }
 }
 
-@media (max-width: 479px) {}
+@media (max-width: 479px) {
+}
 
 /* @media (max-width: 414px) {
 
