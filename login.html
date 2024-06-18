@@ -48,9 +48,10 @@
     <!-- Multiple steup form Start -->
     <div class="multi-steups">
         <div class="container">
-            <form id="multiplesteup" class="multiple-steup" method="post" onsubmit="return false;">
+            <form id="multiplesteup" class="multiple-steup" method="post" onsubmit="return false;"
+                enctype="multipart/form-data">
                 <!-- Step 1 -->
-                <section class="multi-steup-card step-1 bg-white active mb-5 text-center d-none"
+                <section class="multi-steup-card step-1 bg-white active mb-5 text-center"
                     data-pre-steup="index.html" data-next-steup="step-2">
                     <div class="row">
                         <div class="col-12">
@@ -502,7 +503,7 @@
                             <!-- Step 6 Title -->
                             <h2 class="pt-4 text-black">Choose your sexual orientation?</h2>
                             <!-- Step 6 Options -->
-                            <div class="py-sm-5 py-4 text-start checkbox-style-one">
+                            <div class="py-sm-5 py-4 text-start checkbox-style-one checkbox-selected-lable">
                                 <div class="d-grid gap-3 grid-cols-2 grid-cols-sm-3">
                                     <label for="ori-check-1"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
@@ -545,55 +546,240 @@
                 </section>
 
                 <!-- Step 7 -->
-                <section class="multi-steup-card-one multi-steup-card step-7 bg-white mb-5 text-center"
-                    data-pre-steup="step-6" data-next-steup="step-8">
+                <section class="multi-steup-card-one multi-steup-card step-7 bg-white mb-5 text-center d-none"
+                    data-pre-steup="step-7" data-next-steup="step-8">
                     <div class="row">
                         <div class="col-12">
                             <!-- Step 6 icon -->
                             <div class="themeicon rounded-circle mx-auto display-center">
-                                <svg class="sm-svg" width="37" height="44" viewBox="0 0 37 44" fill="none"
+                                <svg class="sm-svg" width="32" height="30" viewBox="0 0 32 30" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M18.2041 5.57789C15.259 5.56975 12.4022 6.58288 10.1203 8.4447L8.83256 7.15795L9.44471 6.54638C9.69364 6.29751 9.83351 5.95996 9.83356 5.60797C9.83361 5.25597 9.69382 4.91838 9.44496 4.66945C9.1961 4.42052 8.85854 4.28065 8.50655 4.2806C8.15456 4.28056 7.81696 4.42034 7.56804 4.6692L6.9553 5.28127L4.9134 3.23878H9.49033C9.84232 3.23878 10.1799 3.09895 10.4288 2.85007C10.6777 2.60118 10.8175 2.26361 10.8175 1.91163C10.8175 1.55964 10.6777 1.22208 10.4288 0.973187C10.1799 0.724297 9.84232 0.584473 9.49033 0.584473H1.70882C1.35695 0.584714 1.01956 0.72463 0.770793 0.973479C0.522022 1.22233 0.382212 1.55976 0.38208 1.91163V9.69206C0.38208 10.044 0.521905 10.3816 0.770794 10.6305C1.01968 10.8794 1.35725 11.0192 1.70923 11.0192C2.06122 11.0192 2.39878 10.8794 2.64767 10.6305C2.89656 10.3816 3.03639 10.044 3.03639 9.69206V5.11595L5.07929 7.15795L4.46714 7.77001C4.34098 7.89261 4.24046 8.03907 4.17141 8.20087C4.10236 8.36267 4.06617 8.53658 4.06494 8.71249C4.06371 8.8884 4.09746 9.06281 4.16424 9.22555C4.23102 9.3883 4.32948 9.53615 4.45391 9.66051C4.57834 9.78486 4.72625 9.88323 4.88904 9.94991C5.05184 10.0166 5.22626 10.0502 5.40217 10.0489C5.57808 10.0476 5.75197 10.0113 5.91373 9.94211C6.07548 9.87296 6.22188 9.77234 6.3444 9.64611L6.9553 9.03512L8.24356 10.3225C6.78629 12.1162 5.841 14.2704 5.50768 16.5573C5.17436 18.8442 5.46542 21.1787 6.35006 23.3138C7.2347 25.4488 8.68002 27.305 10.5331 28.686C12.3862 30.067 14.5781 30.9214 16.8769 31.1588V34.489H12.2943C11.9423 34.489 11.6047 34.6288 11.3558 34.8777C11.1069 35.1266 10.9671 35.4642 10.9671 35.8162C10.9671 36.1681 11.1069 36.5057 11.3558 36.7546C11.6047 37.0035 11.9423 37.1433 12.2943 37.1433H16.8769V41.7262C16.8769 42.0782 17.0168 42.4158 17.2657 42.6647C17.5145 42.9136 17.8521 43.0534 18.2041 43.0534C18.5561 43.0534 18.8936 42.9136 19.1425 42.6647C19.3914 42.4158 19.5312 42.0782 19.5312 41.7262V37.1434H24.1141C24.4661 37.1434 24.8036 37.0036 25.0525 36.7547C25.3014 36.5058 25.4412 36.1682 25.4412 35.8162C25.4412 35.4643 25.3014 35.1267 25.0525 34.8778C24.8036 34.6289 24.4661 34.4891 24.1141 34.4891H19.5312V31.1588C21.8295 30.9202 24.0206 30.0652 25.8729 28.684C27.7252 27.3028 29.1699 25.4468 30.0544 23.3122C30.9388 21.1776 31.23 18.8436 30.8973 16.5571C30.5646 14.2706 29.6203 12.1165 28.1642 10.3225L33.3716 5.1162V9.69206C33.3716 10.044 33.5115 10.3816 33.7603 10.6305C34.0092 10.8794 34.3468 11.0192 34.6988 11.0192C35.0508 11.0192 35.3883 10.8794 35.6372 10.6305C35.8861 10.3816 36.0259 10.044 36.0259 9.69206V1.91163C36.0259 1.55969 35.8861 1.22216 35.6373 0.973275C35.3885 0.724392 35.051 0.584539 34.699 0.584473H26.9175C26.5655 0.584473 26.228 0.724297 25.9791 0.973187C25.7302 1.22208 25.5904 1.55964 25.5904 1.91163C25.5904 2.26361 25.7302 2.60118 25.9791 2.85007C26.228 3.09895 26.5655 3.23878 26.9175 3.23878H31.4944L26.2882 8.44495C24.0062 6.58307 21.1493 5.56985 18.2041 5.57789ZM21.2042 12.6762C21.7726 12.6748 22.3356 12.7861 22.8608 13.0037C23.3859 13.2213 23.8626 13.5409 24.2634 13.9439C25.2121 14.8926 25.6263 16.0855 25.461 17.3926C25.0213 20.8722 20.5605 24.2142 18.8794 25.2079C18.675 25.3289 18.4418 25.3928 18.2042 25.3928C17.9666 25.3928 17.7334 25.3289 17.529 25.2079C15.8473 24.2142 11.3865 20.8722 10.9468 17.3926C10.7821 16.0855 11.1956 14.8926 12.145 13.9439C12.946 13.1427 14.0295 12.6876 15.1624 12.6765C16.2954 12.6655 17.3875 13.0992 18.2041 13.8847C19.0088 13.1068 20.085 12.6734 21.2042 12.6764V12.6762ZM22.8278 17.0599C22.6103 18.7837 20.1909 21.1415 18.2041 22.492C16.2178 21.1415 13.7978 18.7837 13.5809 17.0599C13.5187 16.5693 13.6544 16.1872 14.0217 15.8209C14.1769 15.6654 14.3612 15.542 14.5641 15.4578C14.767 15.3736 14.9845 15.3302 15.2042 15.3302C15.4239 15.3302 15.6414 15.3736 15.8444 15.4578C16.0473 15.542 16.2316 15.6654 16.3867 15.8209C16.5015 15.94 16.6095 16.0654 16.7102 16.1966C16.8608 16.3821 17.0296 16.5919 17.2489 16.8182C17.3726 16.9467 17.521 17.049 17.6852 17.1188C17.8494 17.1886 18.026 17.2246 18.2044 17.2246C18.3828 17.2246 18.5594 17.1886 18.7236 17.1188C18.8877 17.049 19.0361 16.9467 19.1599 16.8182C19.3785 16.5919 19.548 16.3821 19.6973 16.1972C19.7987 16.0662 19.9069 15.9406 20.0215 15.8209C20.1766 15.6654 20.3609 15.542 20.5638 15.4578C20.7667 15.3736 20.9842 15.3302 21.2039 15.3302C21.4236 15.3302 21.6411 15.3736 21.844 15.4578C22.0469 15.542 22.2312 15.6654 22.3864 15.8209C22.7536 16.1874 22.8899 16.5695 22.8276 17.0602L22.8278 17.0599Z"
+                                    <path
+                                        d="M26.389 3.15162H23.4165V1.09095C23.4165 0.5222 22.9549 0.0606079 22.3861 0.0606079C21.8174 0.0606079 21.3558 0.5222 21.3558 1.09095V3.15162H11.0514V1.09095C11.0514 0.5222 10.5898 0.0606079 10.021 0.0606079C9.45229 0.0606079 8.9907 0.5222 8.9907 1.09095V3.15162H6.01818C3.11262 3.15162 0.749023 5.51522 0.749023 8.42078V24.6702C0.749023 27.5758 3.11262 29.9394 6.01818 29.9394H26.389C29.2946 29.9394 31.6592 27.5758 31.6592 24.6702V8.42078C31.6592 5.51522 29.2956 3.15162 26.389 3.15162ZM6.01818 5.2123H8.9907V7.27298C8.9907 7.84172 9.45229 8.30332 10.021 8.30332C10.5898 8.30332 11.0514 7.84172 11.0514 7.27298V5.2123H21.3558V7.27298C21.3558 7.84172 21.8174 8.30332 22.3861 8.30332C22.9549 8.30332 23.4165 7.84172 23.4165 7.27298V5.2123H26.389C28.1581 5.2123 29.5985 6.65168 29.5985 8.42078V11.0512H2.80867V8.42078C2.80867 6.65168 4.24805 5.2123 6.01714 5.2123H6.01818ZM8.04073 19.0508C8.60948 19.0508 9.07107 19.5124 9.07107 20.0811C9.07107 20.6499 8.60948 21.1115 8.04073 21.1115C7.47198 21.1115 7.01039 20.6499 7.01039 20.0811C7.01039 19.5124 7.47198 19.0508 8.04073 19.0508ZM7.01039 15.459C7.01039 14.8903 7.47198 14.4287 8.04073 14.4287C8.60948 14.4287 9.07107 14.8903 9.07107 15.459C9.07107 16.0278 8.60948 16.4894 8.04073 16.4894C7.47198 16.4894 7.01039 16.0278 7.01039 15.459ZM8.04073 23.8882C8.60948 23.8882 9.07107 24.3498 9.07107 24.9186C9.07107 25.4873 8.60948 25.9489 8.04073 25.9489C7.47198 25.9489 7.01039 25.4873 7.01039 24.9186C7.01039 24.3498 7.47198 23.8882 8.04073 23.8882ZM13.3233 19.0497H24.6725C25.2412 19.0497 25.7028 19.5113 25.7028 20.0801C25.7028 20.6488 25.2412 21.1104 24.6725 21.1104H13.3222C12.7535 21.1104 12.2919 20.6488 12.2919 20.0801C12.2919 19.5113 12.7535 19.0497 13.3222 19.0497H13.3233ZM12.2929 15.458C12.2929 14.8892 12.7545 14.4276 13.3233 14.4276H24.6725C25.2412 14.4276 25.7028 14.8892 25.7028 15.458C25.7028 16.0267 25.2412 16.4883 24.6725 16.4883H13.3222C12.7535 16.4883 12.2919 16.0267 12.2919 15.458H12.2929ZM13.3233 23.8872H24.6725C25.2412 23.8872 25.7028 24.3488 25.7028 24.9175C25.7028 25.4863 25.2412 25.9479 24.6725 25.9479H13.3222C12.7535 25.9479 12.2919 25.4863 12.2919 24.9175C12.2919 24.3488 12.7535 23.8872 13.3222 23.8872H13.3233Z"
                                         fill="white" />
                                 </svg>
                             </div>
                             <!-- Step 6 Title -->
                             <h2 class="pt-4 text-black">What are you doing in your daily routine?</h2>
                             <!-- Step 6 Options -->
-                            <div class="py-sm-5 py-4 text-start checkbox-style-one">
+                            <div class="pt-sm-5 pt-4 text-start checkbox-style-one checkbox-selected-lable">
                                 <div class="d-flex flex-wrap gap-2">
-                                    <label for="rou-check-1"
+                                    <label for="routing-check-1"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
-                                        <input type="checkbox" id="rou-check-1" name="rou-check-1" value="tea"><span
-                                            class="text-start mx-sm-2 mx-1 font-weight-5">Tea</span>
+                                        <input type="checkbox" id="routing-check-1" name="routing-check-1"
+                                            value="tea"><span class="text-start mx-sm-2 mx-1 font-weight-5">Tea</span>
+                                        <span class="check"></span>
+
                                     </label>
-                                    <label for="rou-check-2"
+                                    <label for="routing-check-2"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
-                                        <input type="checkbox" id="rou-check-2" name="rou-check-2" value="brunch"><span
+                                        <input type="checkbox" id="routing-check-2" name="routing-check-2"
+                                            value="brunch"><span
                                             class="text-start mx-sm-2 mx-1 font-weight-5">Brunch</span>
                                     </label>
-                                    <label for="rou-check-3"
+                                    <label for="routing-check-3"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
-                                        <input type="checkbox" id="rou-check-3" name="rou-check-3" value="coffee"><span
+                                        <input type="checkbox" id="routing-check-3" name="routing-check-3"
+                                            value="coffee"><span
                                             class="text-start mx-sm-2 mx-1 font-weight-5">Coffee</span>
                                     </label>
-                                    <label for="rou-check-4"
+                                    <label for="routing-check-4"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
-                                        <input type="checkbox" id="rou-check-4" name="rou-check-4" value="shopping"><span
+                                        <input type="checkbox" id="routing-check-4" name="routing-check-4"
+                                            value="shopping"><span
                                             class="text-start mx-sm-2 mx-1 font-weight-5">Shopping</span>
                                     </label>
-                                    <label for="rou-check-5"
+                                    <label for="routing-check-5"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
-                                        <input type="checkbox" id="rou-check-5" name="rou-check-5" value="instagram"><span
+                                        <input type="checkbox" id="routing-check-5" name="routing-check-5"
+                                            value="instagram"><span
                                             class="text-start mx-sm-2 mx-1 font-weight-5">Instagram</span>
                                     </label>
-                                    <label for="rou-check-6"
+                                    <label for="routing-check-6"
                                         class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
-                                        <input type="checkbox" id="rou-check-6" name="rou-check-6" value="football"><span
+                                        <input type="checkbox" id="routing-check-6" name="routing-check-6"
+                                            value="football"><span
                                             class="text-start mx-sm-2 mx-1 font-weight-5">Football</span>
                                     </label>
+                                    <label for="routing-check-7"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-7" name="routing-check-7"
+                                            value="brunch"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Brunch</span>
+                                    </label>
+                                    <label for="routing-check-8"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-8" name="routing-check-8"
+                                            value="ludo"><span class="text-start mx-sm-2 mx-1 font-weight-5">Ludo</span>
+                                    </label>
+                                    <label for="routing-check-9"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-9" name="routing-check-9"
+                                            value="cricket"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Cricket</span>
+                                    </label>
+                                    <label for="routing-check-10"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-10" name="routing-check-10"
+                                            value="dancing"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Dancing</span>
+                                    </label>
+                                    <label for="routing-check-11"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-11" name="routing-check-11"
+                                            value="mango"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Mango</span>
+                                    </label>
+                                    <label for="routing-check-12"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-12" name="routing-check-12"
+                                            value="anima"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Anima</span>
+                                    </label>
+                                    <label for="routing-check-13"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-13" name="routing-check-13"
+                                            value="memes"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Memes</span>
+                                    </label>
+                                    <label for="routing-check-14"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-14" name="routing-check-14"
+                                            value="fashion"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Fashion</span>
+                                    </label>
+                                    <label for="routing-check-15"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-15" name="routing-check-15"
+                                            value="gym"><span class="text-start mx-sm-2 mx-1 font-weight-5">Gym</span>
+                                    </label>
+                                    <label for="routing-check-16"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-16" name="routing-check-16"
+                                            value="drawing"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Drawing</span>
+                                    </label>
+                                    <label for="routing-check-17"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-17" name="routing-check-17"
+                                            value="basketball"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Basketball</span>
+                                    </label>
+                                    <label for="routing-check-18"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-18" name="routing-check-18"
+                                            value="boxing"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Boxing</span>
+                                    </label>
+                                    <label for="routing-check-19"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-19" name="routing-check-19"
+                                            value="walking"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Walking</span>
+                                    </label>
+                                    <label for="routing-check-20"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-20" name="routing-check-20"
+                                            value="running"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Running</span>
+                                    </label>
+                                    <label for="routing-check-21"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-21" name="routing-check-21"
+                                            value="movies"><span
+                                            class="text-start mx-sm-2 mx-1 font-weight-5">Movies</span>
+                                    </label>
+                                    <label for="routing-check-22"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-22" name="routing-check-22"
+                                            value="web-series"><span class="text-start mx-sm-2 mx-1 font-weight-5">Web
+                                            Series</span>
+                                    </label>
+                                    <label for="routing-check-23"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-23" name="routing-check-23"
+                                            value="cars"><span class="text-start mx-sm-2 mx-1 font-weight-5">Cars</span>
+                                    </label>
+                                    <label for="routing-check-24"
+                                        class="d-flex align-items-center p-3 flex-sm-nowrap flex-wrap">
+                                        <input type="checkbox" id="routing-check-24" name="routing-check-24"
+                                            value="bike"><span class="text-start mx-sm-2 mx-1 font-weight-5">Bike</span>
+                                    </label>
                                 </div>
+                            </div>
+                        </div>
+                </section>
+
+                <!-- Step 8 -->
+                <section class="multi-steup-card-one multi-steup-card step-7 bg-white mb-5 text-center d-none"
+                    data-pre-steup="step-8" data-next-steup="step-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Step 8 icon -->
+                            <div class="themeicon rounded-circle mx-auto display-center">
+                                <svg class="sm-svg" width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26.0073 7.92197V12.6251C26.0073 12.6251 22.8771 12.6409 22.8614 12.6251V7.92197H18.1425C18.1425 7.92197 18.1582 4.79176 18.1425 4.77603H22.8614V0.0571289H26.0073V4.77603H30.7262V7.92197H26.0073ZM21.2884 14.2138V9.49493H16.5695V4.77603H3.98578C2.25551 4.77603 0.839844 6.1917 0.839844 7.92197V26.7976C0.839844 28.5278 2.25551 29.9435 3.98578 29.9435H22.8614C24.5917 29.9435 26.0073 28.5278 26.0073 26.7976V14.2138H21.2884ZM3.98578 26.7976L8.70468 20.5057L11.8506 25.2246L16.5695 18.9327L22.8614 26.7976H3.98578Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <!-- Step 8 Title -->
+                            <h2 class="pt-4 text-black">Add your best recent photo </h2>
+                            <!-- Step  8 short description -->
+                            <p>Upload 2 photos to proceed. Add 4 more photos to make your profile complete and best</p>
+                            <div class="d-grid grid-cols-md-3 grid-cols-xs-2 grid-cols-1 gap-3">
+                                <div class="images-gallery-item w-100 p-2">
+                                    <div class="images-gallery-item-contain d-flex display-center">
+                                        <span
+                                            class="themeicon-plus display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>
+                                        <input type="file" name="image-1" class="file-input d-none" accept="image/*">
+                                        <img src="" class="d-none  w-100 h-100">
+                                    </div>
+                                </div>
+
+                                <div class="images-gallery-item w-100 p-2">
+                                    <div class="images-gallery-item-contain d-flex display-center">
+                                        <span
+                                            class="themeicon-plus display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>
+                                        <input type="file" name="image-2" class="file-input d-none" accept="image/*">
+                                        <img src="" class="d-none  w-100 h-100">
+                                    </div>
+                                </div>
+                                <div class="images-gallery-item w-100 p-2">
+                                    <div class="images-gallery-item-contain d-flex display-center">
+                                        <span
+                                            class="themeicon-plus display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>
+                                        <input type="file" name="image-3" class="file-input d-none" accept="image/*">
+                                        <img src="" class="d-none  w-100 h-100">
+                                    </div>
+                                </div>
+                                <div class="images-gallery-item w-100 p-2">
+                                    <div class="images-gallery-item-contain d-flex display-center">
+                                        <span
+                                            class="themeicon-plus display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>
+                                        <input type="file" name="image-4" class="file-input d-none" accept="image/*">
+                                        <img src="" class="d-none  w-100 h-100">
+                                    </div>
+                                </div>
+
+                                <div class="images-gallery-item w-100 p-2">
+                                    <div class="images-gallery-item-contain d-flex display-center">
+                                        <span
+                                            class="themeicon-plus display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>
+                                        <input type="file" name="image-5" class="file-input d-none" accept="image/*">
+                                        <img src="" class="d-none  w-100 h-100">
+                                    </div>
+                                </div>
+                                <div class="images-gallery-item w-100 p-2">
+                                    <div class="images-gallery-item-contain d-flex display-center">
+                                        <span
+                                            class="themeicon-plus display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>
+                                        <input type="file" name="image-6" class="file-input d-none" accept="image/*">
+                                        <img src="" class="d-none  w-100 h-100">
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                 </section>

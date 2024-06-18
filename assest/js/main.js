@@ -4,6 +4,7 @@
     1.1 Phone Number
     1.2 Preview and Next button
     1.3 OTP Number
+    1.4 Border
 
 ******** JS INDEX *********/
 
@@ -102,4 +103,61 @@
   for (i = endYear; i > startYear; i--) {
     $("#yearpicker").append($("<option />").val(i).html(i));
   }
+
+  /*-----------------------------
+  1.5. Border add and remove
+-----------------------------*/
+  jQuery('.checkbox-selected-lable input[type="checkbox"]').click(function () {
+    jQuery(this).parents("label").toggleClass("selected-lable");
+  });
+
+  jQuery(document).on("click", ".themeicon-plus", function () {
+    jQuery(this).next(".file-input").click();
+  });
+
+  jQuery(document).on("change", ".file-input", function (e) {
+    jQuery(this)
+      .next("img")
+      .attr("src", URL.createObjectURL(e.target.files[0])).removeClass('d-none');
+      jQuery(this).prev(".themeicon-plus").hide();;
+  });
+
+  /* document.addEventListener("DOMContentLoaded", function () {
+    const photoUploadContainers = document.querySelectorAll(
+      ".images-gallery-item"
+    );
+
+    photoUploadContainers.forEach((container) => {
+      container.addEventListener("click", function () {
+        const fileInput = this.querySelector(".file-input");
+        if (fileInput) {
+          fileInput.click();
+        }
+      });
+
+      container
+        .querySelector(".file-input")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.createElement("img");
+              img.src = e.target.result;
+              img.classList.add("border-radius-10", "w-100", "max-height-149");
+
+              img.style.height = "147px";
+              img.style.objectFit = "cover";
+
+              const addPhotoBox = container.querySelector(
+                ".images-gallery-item-contain"
+              );
+              addPhotoBox.innerHTML = "";
+              addPhotoBox.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+    });
+  }); */
 })(jQuery);
