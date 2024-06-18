@@ -571,19 +571,7 @@ select:hover,
   border: 1px solid var(--color-white-grey-90);
   height: 100%;
 }
-/* .recent-photo img {
-  max-width: 156px;
-  min-height: 167px;
-}
-
-.add-photo-icon {
-  background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
-  min-height: 37px;
-  min-width: 37px;
-}
-
-.max-height-167 {
-  max-height: 149px;
+.images-gallery-item-contain img{
+  max-height: 162px;
   object-fit: cover;
-  overflow: hidden;
-} */
+}
