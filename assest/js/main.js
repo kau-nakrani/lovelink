@@ -120,6 +120,19 @@
       .next("img")
       .attr("src", URL.createObjectURL(e.target.files[0]))
       .removeClass("d-none");
+
     jQuery(this).prev(".themeicon-plus").hide();
+    jQuery(this).after(
+      '<span class="themeicon-close display-center fs-16 text-white fw-bold add-photo-icon rounded-circle cursor-pointer">&#43;</span>'
+    );
+  });
+  jQuery(document).on("click", ".themeicon-close", function (e) {
+    jQuery(this).next("img").attr("src", null).addClass("d-none");
+    jQuery(this).prev('input[type="file"]').val();
+    jQuery(this)
+      .closest(".images-gallery-item-contain")
+      .find(".themeicon-plus")
+      .show();
+    jQuery(this).remove();
   });
 })(jQuery);

@@ -289,7 +289,7 @@ select:hover,
   min-width: 82px;
   min-height: 82px;
 }
-.themeicon-plus{
+.themeicon-plus,.themeicon-close{
   background: var(--linear-gradient-left-second);
   box-shadow: 0px 10px 19px 0px #2c030b26;
   width: fit-content;
@@ -570,8 +570,18 @@ select:hover,
   background-color: var(--color-bright-gray);
   border: 1px solid var(--color-white-grey-90);
   height: 100%;
+  position: relative;
 }
 .images-gallery-item-contain img{
   max-height: 162px;
   object-fit: cover;
+}
+.themeicon-close{
+  top: -8px;
+  right: -8px;
+  transform: rotate(45deg);
+  font-size: 27px;
+  min-height: 30px;
+  min-width: 30px;
+  position: absolute;
 }
